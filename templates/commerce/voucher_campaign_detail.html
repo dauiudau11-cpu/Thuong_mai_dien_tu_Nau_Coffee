@@ -1,0 +1,11 @@
+{% extends 'commerce/operations_base.html' %}
+{% block title %}Quản lý Voucher{% endblock %}
+{% block workspace %}
+<a href="{% url 'voucher_campaigns' %}">← Quản lý Voucher</a>
+<h1>{{ campaign.voucher.code }}</h1>
+<p>Chính sách mới · {{ campaign.get_audience_display }} · Đã dùng {{ total_used }}, còn {{ remaining }} lượt toàn chương trình.</p>
+<section class="panel"><h2>Cấu hình</h2><p>Loại công khai/riêng được giữ cố định. Thay đổi chỉ áp dụng cho đơn mới; lịch sử giảm giá và lượt dùng được giữ nguyên.</p><form method="post">{% csrf_token %}{{ form.as_p }}<button>Lưu cấu hình</button></form></section>
+<section class="panel"><h2>Lượt cấp riêng</h2>{% for grant in grants %}<p>{{ grant.user.username }}: được cấp {{ grant.allocated }}, đã dùng {{ grant.used }}, còn {{ grant.remaining }} lượt.</p>{% empty %}<p>Chưa cấp lượt riêng.</p>{% endfor %}</section>
+<section class="panel"><h2>Lịch sử áp dụng</h2>{% for use in uses %}<article><p><a href="{% url 'staff_order_detail' use.redemption.order.public_code %}">Đơn {{ use.redemption.order.public_code }}</a> · {{ use.user.username }} · {{ use.redemption.order.created_at|date:'d/m/Y H:i' }}</p><p>{{ use.snapshot.channel }} · Giảm {{ use.snapshot.discount }} đ · {{ use.redemption.order.get_status_display }} · Lượt {{ use.ordinal }}</p></article>{% empty %}<p>Chưa có đơn áp dụng.</p>{% endfor %}
+{% if uses.has_previous %}<a href="?page={{ uses.previous_page_number }}">Trước</a>{% endif %}{% if uses.has_next %}<a href="?page={{ uses.next_page_number }}">Sau</a>{% endif %}</section>
+{% endblock %}

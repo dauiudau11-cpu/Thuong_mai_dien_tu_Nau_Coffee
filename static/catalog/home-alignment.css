@@ -1,0 +1,63 @@
+/* Home only: proportions measured against Drive 01_trang_chu.png (1448x1086).
+   Existing WIP styles and other screens remain available unchanged. */
+.home-reference{background:#fbf8f3;font-family:var(--nau-sans);line-height:1.4}
+.home-reference main#content{width:100%;max-width:none;padding:0;min-height:0}
+
+
+
+
+
+
+
+
+
+.home-reference .premium-hero.premium-approved-hero{min-height:282px;height:282px;background-color:#302116;background-image:linear-gradient(90deg,#302116 0%,#302116b0 33%,transparent 63%),url('premium/hero.webp');background-size:100% 100%,auto 100%;background-position:center,right center;background-repeat:no-repeat}
+.home-reference .premium-approved-hero .premium-hero-copy{width:min(1100px,calc(100% - 48px));padding:23px 0}
+.home-reference .premium-approved-hero h1{font:600 58px/.98 var(--nau-serif)!important;letter-spacing:-1px;max-width:570px;margin:10px 0 13px;text-wrap:initial}
+.home-reference .premium-approved-hero .premium-hero-copy .eyebrow{font-size:9px;letter-spacing:3px;font-weight:400;margin:0 0 12px}
+.home-reference .premium-approved-hero .premium-hero-copy>p:not(.eyebrow){max-width:440px;font-size:14px;line-height:1.3;margin:0}
+.home-reference .premium-approved-hero .premium-hero-cta{font-size:13px;padding:9px 22px;min-height:40px;margin-top:12px}
+.home-reference .premium-hero-script{right:41%;top:25%;font:italic 20px/1.2 Georgia,serif;max-width:130px}
+.home-reference .premium-approved-content{max-width:1268px;width:100%;padding:0 20px;margin:auto}
+.home-reference .premium-approved-heading{margin:10px 0 6px;align-items:center;flex-wrap:nowrap}
+.home-reference .premium-approved-heading h2{font:700 17px/1.2 var(--nau-serif);letter-spacing:0;margin:0}
+.home-reference .premium-approved-heading a{font-size:10px;white-space:nowrap}
+.home-reference .premium-featured .product-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.home-reference .home-product-card{padding:0;border:1px solid #eee7df;border-radius:6px;box-shadow:0 3px 10px #40251605;background:#fffdf9;overflow:hidden}
+.home-product-link{display:flex;flex-direction:column;color:#241c15;text-decoration:none;height:100%}
+.home-product-link:hover{color:#5d6f47}.home-product-link:focus-visible{outline-offset:-3px}
+.home-reference .home-product-card .product-image{height:136px;border-radius:5px;flex-shrink:0}
+.home-reference .home-product-card .product-image img{width:100%;height:100%;padding:0;object-fit:cover;aspect-ratio:auto}
+.home-product-name{font-size:12px;line-height:1.3;margin:6px 8px 2px}
+.home-product-price{display:block;font-size:12px;line-height:1.4;margin:0 8px 7px;color:#422419}
+.home-product-card .sale-caption{font-size:10px;margin:2px 8px}
+.home-reference .premium-note{font-size:10px;margin:5px 0;line-height:1.3;color:#726253}
+.home-reference .premium-approved-categories{display:flex;flex-wrap:nowrap;justify-content:space-around;gap:8px;padding:6px 12px;margin:7px 0;background:#f0e7db;border-radius:10px}
+.home-reference .premium-approved-categories .premium-category-item{flex-direction:row;gap:7px;min-width:0;padding:0 8px;min-height:42px;border-right:1px solid #dbcebd;flex:0 0 auto;font-size:11px}
+.home-reference .premium-approved-categories .premium-category-item:last-child{border:0}
+.home-reference .premium-approved-categories .premium-category-icon{width:30px;height:30px;border:0;box-shadow:none;background:transparent;font-size:22px}
+.home-reference .premium-approved-categories .premium-category-item>span:not(.premium-category-icon){font-size:11px;white-space:nowrap}
+.home-reference .premium-voucher-hero{min-height:116px;margin:7px 0;padding:12px 32px;gap:3px;border-radius:10px;background-image:linear-gradient(90deg,#27351bf5,#27351bb5 50%,#301c1150),url('premium/hero.webp');background-size:cover;background-position:right center}
+.home-reference .premium-voucher-hero h2{font:600 33px/1.05 var(--nau-serif);letter-spacing:-.02em;margin:0}
+.home-reference .premium-voucher-hero h2 br{display:none}.home-reference .premium-voucher-hero .eyebrow{font-size:9px;margin:0}
+.home-reference .premium-voucher-hero .button{padding:5px 12px;min-height:32px;font-size:11px;margin-top:4px}
+.home-reference .premium-benefit-grid{gap:16px;padding:8px 0;margin:0;border:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+.home-reference .premium-benefit-grid>div{gap:9px}.home-reference .premium-benefit-icon{width:43px;height:43px;font-size:21px}
+.home-reference .premium-benefit-grid strong{font-size:12px}.home-reference .premium-benefit-grid small{font-size:10px;line-height:1.3}
+.home-reference .premium-customer-voices{margin:0 0 12px}.home-reference .premium-customer-voices .section-heading{margin:2px 0 6px;align-items:center}
+.home-reference .premium-customer-voices h2{font:700 16px/1.3 var(--nau-serif);letter-spacing:0;margin:0}.home-reference .premium-customer-voices .section-heading a{font-size:10px}
+.home-reference .premium-voice-grid{gap:12px}.home-reference .premium-voice-grid article{padding:12px;box-shadow:none;font-size:12px}.home-reference .premium-voice-grid blockquote{margin:4px 0 8px}
+.home-reviews-empty{grid-column:1/-1;min-height:100px;border:1px solid #ece3d9;background:#fffdf9;border-radius:8px;padding:16px 20px;font-size:12px;color:#766758}.home-reviews-empty p{margin:0 0 5px}.home-reviews-empty a{display:inline-flex;min-height:32px;align-items:center}
+.home-reference .site-footer{padding:16px max(24px,calc((100% - 1228px)/2)) 8px}.home-reference .footer-grid{gap:28px;grid-template-columns:1.4fr repeat(3,1fr)}
+.home-reference .footer-grid p{font-size:12px;line-height:1.35;max-width:240px;margin:8px 0}.home-reference .footer-grid small{font-size:10px}.home-reference .footer-grid nav{font-size:11px;gap:3px}.home-reference .footer-grid nav strong{font-size:10px;margin:0 0 4px}.home-reference .footer-grid nav a{min-height:22px;line-height:1.4}.home-reference .footer-note{font-size:9px;margin-top:9px;padding-top:8px}.home-reference .premium-footer-logo{font-size:29px}
+@media(max-width:1279px){.home-reference .premium-featured .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.home-reference .home-product-card .product-image{height:155px}}
+@media(max-width:1000px){.home-reference .premium-hero.premium-approved-hero{height:290px;min-height:290px}.home-reference .premium-approved-hero h1{font-size:46px!important;max-width:460px}.home-reference .premium-approved-hero .premium-hero-copy>p:not(.eyebrow){max-width:350px}.home-reference .premium-approved-categories{overflow-x:auto;justify-content:flex-start}.home-reference .premium-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px 0}.home-reference .premium-hero-script{display:none}}
+@media(max-width:600px){.home-reference .premium-hero.premium-approved-hero{height:290px;min-height:290px;background-image:linear-gradient(90deg,#302116ed,#302116b0 65%,#30211650),url('premium/hero.webp');background-size:100% 100%,auto 100%}.home-reference .premium-approved-hero .premium-hero-copy{width:calc(100% - 36px);padding:22px 0}.home-reference .premium-approved-hero h1{font-size:38px!important;line-height:1.04;max-width:340px}.home-reference .premium-approved-hero .premium-hero-copy .eyebrow{font-size:8px;letter-spacing:1.4px;max-width:300px;line-height:1.5}.home-reference .premium-approved-hero .premium-hero-copy>p:not(.eyebrow){font-size:12px;max-width:310px}.home-reference .premium-approved-content{padding:0 14px}.home-reference .premium-featured .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-reference .home-product-card .product-image{height:115px}.home-product-name,.home-product-price{font-size:12px}.home-reference .premium-voucher-hero{padding:16px;min-height:145px}.home-reference .premium-voucher-hero h2{font-size:27px}.home-reference .premium-benefit-grid{gap:12px}.home-reference .premium-benefit-grid strong{font-size:11px}.home-reference .premium-voice-grid{grid-template-columns:1fr}.home-reference .site-footer{padding:22px 16px 12px}.home-reference .footer-grid{grid-template-columns:1fr 1fr;gap:18px}.home-reference .footer-grid>div{grid-column:1/-1}.home-reference .footer-grid nav a{min-height:44px}.home-reference .footer-grid p{max-width:none}.home-reference .footer-note{font-size:9px}}
+/* Keep the cup to the right of the copy on tablet; retain a visible cup on mobile. */
+@media(min-width:601px) and (max-width:1000px){.home-reference .premium-hero.premium-approved-hero{background-position:center,calc(100vw - 620px) center}}
+@media(max-width:600px){.home-reference .premium-hero.premium-approved-hero{background-position:center,20% center}}
+
+.pickup-hero-actions{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}.home-reference .pickup-partner-cta{color:#fffaf4;font-size:13px;min-height:44px;display:inline-flex;align-items:center;text-underline-offset:4px}
+
+/* Vietnamese decorative hero copy uses the bundled serif glyphs. */
+.home-reference .premium-hero-script { font-family: var(--nau-serif); }

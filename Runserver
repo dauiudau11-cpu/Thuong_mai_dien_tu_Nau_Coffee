@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+# Phase C: form đăng ký6trường, Accounts/Reset/VoucherV2 ON, email sandbox.
+# Guard cần cả pg_lab_postgres và nau_localization_qa_20261111 đang chạy
+# để xác minh hai instance/volume tách biệt; pg_isready preview chưa đủ.
+# Nếu QA đã dừng: kiểm tra docker ps -a rồi bật đúng container QA hiện có;
+# không tạo lại container/volume hoặc thay secrets. Inspect FAIL thì dừng.
+# Dùng local_feature_preview.py; pickup_preview.py dùng test_settings và có thể hiển thị form legacy.
+# Nâu Coffee V3 — localhost duy nhất, email sandbox nội bộ
+cd /home/thientran/projects/NauCoffee
+.venv/bin/python scripts/local_feature_preview.py inspect
+.venv/bin/python scripts/local_feature_preview.py serve
+# URL: http://127.0.0.1:8000/
+# Hộp thư sandbox (chỉ Admin): http://127.0.0.1:8000/__local/mail/
+# Nếu 8000 đã có server hợp lệ, dùng server đang chạy; không khởi động lần hai.
+# Ctrl+C dừng server và SMTP capture của terminal này. Không chạy thêm8001.
+# Runtime/private mail nằm ngoài repo; không gửi Gmail hoặc public HTTPS.
+# Không prepare/seed/reset hoặc dùng manage.py runserver mặc định trỏ nhầm dev.
+# Migration chỉ dùng maintenance helper khi đã có phê duyệt và fresh backup/restore PASS.
+# Regression ghi chỉ trên QA55441; không chạy tests trên preview5432.

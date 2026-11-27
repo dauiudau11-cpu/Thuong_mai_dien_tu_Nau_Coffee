@@ -1,0 +1,27 @@
+/* Shared storefront navigation: homepage proportions on every page. */
+.premium-utility{min-height:24px;height:24px;padding:3px max(24px,calc((100% - 1100px)/2));font-size:10px;line-height:1.4}
+.site-header.premium-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;min-height:50px;padding:0 max(24px,calc((100% - 1100px)/2));gap:18px;line-height:1.4}
+.premium-header .premium-logo{justify-self:start;font:400 29px/.9 Georgia,serif;letter-spacing:4px;min-width:76px}
+.premium-header .premium-logo small{font-size:7px;letter-spacing:4px;margin-top:3px}
+.premium-header .desktop-nav{display:flex;justify-content:center;gap:21px;font-size:12px;margin:0}
+.premium-header .account-nav{justify-self:end;justify-content:flex-end;margin:0;font-size:11px;gap:10px}
+.premium-header .header-logout .text-button{font-size:11px}
+.premium-header .mobile-menu{display:none}
+@media(max-width:1000px){
+  .site-header.premium-header{grid-template-columns:minmax(0,1fr) auto auto;min-height:62px;padding:6px 20px;gap:12px}
+  .premium-header .desktop-nav{display:none}
+  .premium-header .account-nav{grid-column:2;grid-row:1}
+  .premium-header .mobile-menu{display:block;grid-column:3;grid-row:1;width:auto;justify-self:end;order:initial}
+  .premium-header .mobile-menu[open]{grid-column:1/-1;grid-row:2;width:100%;justify-self:stretch}
+  .premium-header .mobile-menu summary{width:auto;min-height:44px}
+  .premium-header .mobile-menu[open] summary{width:100%;justify-content:flex-end}
+}
+@media(max-width:600px){
+  .premium-utility{height:auto;min-height:24px;padding:5px 10px;font-size:9px}
+  .site-header.premium-header{padding:8px 12px;gap:6px}
+  .premium-header .premium-logo{font-size:25px}
+  .premium-header .mobile-menu summary{width:44px;justify-content:center}
+}
+
+.premium-header .account-nav .cart-link{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:7px 10px;text-decoration:none;overflow:visible}
+.cart-quantity-badge{position:absolute;top:3px;right:3px;z-index:1;display:grid;place-items:center;min-width:16px;height:16px;padding:0 3px;border-radius:20px;background:#586b48;color:#fffdf9;border:2px solid #fffdf9;font:700 9px/1 var(--nau-sans,sans-serif);box-sizing:border-box;transform:translate(35%,-35%)}

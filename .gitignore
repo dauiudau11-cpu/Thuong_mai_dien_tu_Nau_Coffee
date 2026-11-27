@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.sqlite3
+media/
+staticfiles/
+.pytest_cache/
+*:Zone.Identifier
+
+# Database backups
+*.dump
+*.backup
+*.sql.gz
+backups/
+
+# Logs and test reports
+*.log
+.coverage
+htmlcov/
+test-results/
+
+# Local credentials
+*.pem
+*.p12
+.pgpass
+
+# Local SQL exports
+*.sql

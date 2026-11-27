@@ -1,0 +1,21 @@
+{% extends 'base.html' %}{% load static policy_ui %}{% block title %}{{ title }}{% endblock %}{% block page_styles %}<link
+  rel="stylesheet"
+  href="{% static 'catalog/policies.css' %}"
+/>{% endblock %}{% block content %}
+<header>
+  <p class="eyebrow">THÔNG TIN CHÍNH SÁCH</p>
+  <h1>{{ title }}</h1>
+  <a href="{% url 'policy_center' %}">← Chính sách & Điều khoản</a>{% if revision %}
+  <p class="policy-meta">
+    Phiên bản {{ revision.version }} · Ngày chính sách {{ revision.effective_at|date:'d/m/Y' }} · Công bố {{ revision.published_at|date:'d/m/Y H:i' }}
+  </p>
+  {% else %}
+  <p>
+    Nội dung hiện hành; bộ chính sách cập nhật đang chờ duyệt trước khi công bố.
+  </p>
+  {% endif %}
+</header>
+<article class="policy-reading">
+  {% include 'support/policy_blocks.html' with policy_body=body %}
+</article>
+{% endblock %}

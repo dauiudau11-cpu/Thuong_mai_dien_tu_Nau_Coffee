@@ -1,0 +1,17 @@
+{% load policy_ui %}{% store_identity as store %}
+NÂU COFFEE | Hỗ trợ khách hàng
+
+{% if invitation %}Bạn được mời hoàn tất tài khoản tại Nâu. Tự đặt mật khẩu riêng sau khi mở liên kết bên dưới; nhân viên không biết mật khẩu của bạn.{% else %}Cảm ơn bạn đã ghé Nâu. Xác minh email để hoàn tất yêu cầu tài khoản của bạn.{% endif %}
+
+Tên đăng nhập: {{ username }}
+Mở liên kết xác minh: {{ activation_url }}
+
+Liên kết có hiệu lực {{ expiry_hours }} giờ và chỉ dùng một lần. Yêu cầu gửi lại sẽ làm liên kết trước đó hết hiệu lực.
+Không chia sẻ liên kết, mật khẩu hoặc mã đồng ý tại quầy với người không liên quan.
+Nếu bạn không yêu cầu thao tác này, hãy bỏ qua email. Tài khoản không được tự kích hoạt.
+
+Nâu Coffee — Một chút Nâu cho ngày dịu lại.
+
+{{ store.name }}
+{{ store.address }}
+Liên hệ: {{ store.phone }} · Email: {{ store.email }}

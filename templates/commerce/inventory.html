@@ -1,0 +1,12 @@
+{% extends 'commerce/operations_base.html' %}
+{% block title %}Kho nguyên liệu{% endblock %}
+{% block workspace %}
+<p class="eyebrow">NÂU · NGUYÊN LIỆU TRONG CA</p><h1>Kho nguyên liệu</h1>
+<p>Định mức, tồn kho và lịch sử biến động. Biến động chỉ được ghi thêm, không sửa/xóa sổ kho.</p>
+<div class="table-wrap inventory-table"><table><caption>Tồn hiện tại và ngưỡng cảnh báo</caption><thead><tr><th scope="col">Nguyên liệu</th><th scope="col">Tồn hiện tại</th><th scope="col">Ngưỡng thấp</th></tr></thead><tbody>
+{% for ingredient in ingredients %}<tr><th scope="row"><span class="stock-sku">{{ ingredient.sku }}</span>{{ ingredient.name }}</th><td data-label="Tồn hiện tại"><span class="stock-number">{{ ingredient.stock|default_if_none:0 }} {{ ingredient.unit }}</span>{% if ingredient.stock <= ingredient.low_stock_threshold %}<strong class="stock-alert">Tồn thấp</strong>{% endif %}</td><td data-label="Ngưỡng thấp">{{ ingredient.low_stock_threshold }} {{ ingredient.unit }}</td></tr>{% empty %}<tr><td colspan="3">Chưa có nguyên liệu.</td></tr>{% endfor %}
+</tbody></table></div>
+{% if can_adjust %}<form method="post" class="panel auth">{% csrf_token %}<h2>Ghi biến động</h2>{{ form.as_p }}<button>Lưu biến động</button></form>{% else %}<p class="notice">Chỉ Quản trị viên hoặc Nhân viên được cấp quyền nhập biến động mới có thể điều chỉnh.</p>{% endif %}
+<h2>Sổ kho gần nhất</h2>{% for entry in movements %}<article class="stock-entry"><p>{{ entry.created_at }} · {{ entry.ingredient }} · {{ entry.delta }} · {{ entry.get_reason_display }}</p><p>{{ entry.note }}</p></article>{% empty %}<p>Chưa có biến động kho.</p>{% endfor %}
+<nav aria-label="Sổ kho">{% if movements.has_previous %}<a href="?page={{ movements.previous_page_number }}">Trước</a>{% endif %}<span>{{ movements.number }}/{{ movements.paginator.num_pages }}</span>{% if movements.has_next %}<a href="?page={{ movements.next_page_number }}">Sau</a>{% endif %}</nav>
+{% endblock %}

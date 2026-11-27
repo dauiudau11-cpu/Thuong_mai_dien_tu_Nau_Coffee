@@ -1,0 +1,5 @@
+{% extends "admin/index.html" %}
+{% block nav-breadcrumbs %}<nav aria-label="Đường dẫn"><div class="breadcrumbs"><span aria-current="page">Quản trị hệ thống</span></div></nav>{% endblock %}
+{% block nav-sidebar %}{% include "admin/nav_sidebar.html" %}{% endblock %}
+
+{% block content %}{% if traffic %}{% include "admin/traffic_dashboard.html" %}{% else %}{{ block.super }}{% endif %}{% endblock %}

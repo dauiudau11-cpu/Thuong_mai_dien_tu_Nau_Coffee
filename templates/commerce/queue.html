@@ -1,0 +1,242 @@
+{% extends 'commerce/operations_base.html' %}{% load nau_ui %}{% block title %}Hàng chờ đơn hàng{% endblock %}{% block workspace %}
+<p class="eyebrow">NHỊP VẬN HÀNH TRONG CA</p>
+<h1>Hàng đợi đơn hàng</h1>
+{% if can_refund %}
+<p>
+  <a class="button quiet" href="{% url 'refunds' %}">Chờ hoàn tiền mô phỏng</a>
+</p>
+{% endif %}
+<p>
+  Kho được trừ khi bắt đầu pha chế. Điểm được cộng sau khi hoàn tất đơn và ghi
+  nhận thanh toán mô phỏng.
+</p>
+<div class="form-actions">
+  <a class="button" href="{% url 'new_manual' %}">＋ Nhập đơn quầy / APP</a
+  ><a class="button quiet" href="{% url 'inventory' %}">Kho nguyên liệu</a>
+</div>
+<form method="get" class="filters panel">
+  <label
+    >Tìm mã đơn hoặc tên khách<input
+      type="search"
+      name="q"
+      value="{{ request.GET.q }}"
+      maxlength="150" /></label
+  ><label
+    >Kênh<select name="channel">
+      <option value="">Tất cả</option>
+      <option value="WEB" {% if request.GET.channel == "WEB" %}selected{% endif %}>
+        WEB
+      </option>
+      <option value="COUNTER" {% if request.GET.channel == "COUNTER" %}selected{% endif %}>
+        COUNTER
+      </option>
+      <option value="APP" {% if request.GET.channel == "APP" %}selected{% endif %}>
+        APP
+      </option>
+    </select></label
+  ><label
+    >Nhận hàng<select name="fulfillment">
+      <option value="">Tất cả</option>
+      <option value="PICKUP" {% if request.GET.fulfillment == "PICKUP" %}selected{% endif %}>
+        Nhận tại quán
+      </option>
+      <option value="DELIVERY" {% if request.GET.fulfillment == "DELIVERY" %}selected{% endif %}>
+        Giao hàng
+      </option>
+    </select></label
+  ><label
+    >Trạng thái<select name="status">
+      <option value="">Tất cả</option>
+      {% for value,label in states %}
+      <option value="{{ value }}" {% if request.GET.status == value %}selected{% endif %}>
+        {{ label }}
+      </option>
+      {% endfor %}
+    </select></label
+  ><button>Lọc</button><a href="{% url 'queue' %}">Xóa bộ lọc</a>
+</form>
+{% for order in page_obj %}
+<article class="queue-order">
+  <div class="order-card-heading">
+    <div>
+      <p class="eyebrow">
+        {{ order.channel }} · {{ order.get_fulfillment_display }}
+      </p>
+      <h2>{{ order.public_code }}</h2>
+    </div>
+    <span class="status-badge status-{{ order.status }}"
+      >{{ order.status|vi_state }}</span
+    >
+  </div>
+  <div class="order-meta">
+    <span>{{ order.customer_name }}</span><strong>{{ order.total|vnd }}</strong
+    ><span class="status-badge status-{{ order.payment.status }}"
+      >{{ order.payment.status|vi_state }}</span
+    >
+  </div>
+  <p>Lịch nhận: {{ order.scheduled_for|date:'d/m/Y H:i' }}</p>
+  {% if order.fulfillment == 'DELIVERY' %}
+  <div class="notice">
+    <p>Địa chỉ: {{ order.address }} · {{ order.phone }}</p>
+    {% if demo_delivery_enabled and order.status == 'PENDING_CONFIRMATION' %}
+    <p>
+      Khoảng cách tham khảo: {{ order.delivery_distance_km }} km (không phải
+      GPS).
+    </p>
+    <form method="post" action="{% url 'transition' order.public_code %}">
+      {% csrf_token %}<input
+        type="hidden"
+        name="status"
+        value="CONFIRMED"
+      /><button>Xác nhận đơn và xuất phiếu MÔ PHỎNG</button>
+    </form>
+    {% elif not order.delivery_verified %}
+    <form
+      method="post"
+      action="{% url 'verify_delivery' order.public_code %}"
+      class="form-grid"
+    >
+      {% csrf_token %}<label
+        >Khoảng cách đã xác minh thủ công (km)<input
+          type="number"
+          name="distance"
+          min="0"
+          max="3"
+          step="0.01"
+          required /></label
+      ><label
+        >Căn cứ xác minh thủ công<input
+          name="reason"
+          maxlength="250"
+          required /></label
+      ><button class="field-wide">Xác nhận phạm vi giao hàng</button>
+    </form>
+    {% else %}
+    <p>
+      Đã xác minh khoảng cách {{ order.delivery_distance_km }} km {% if order.bill_issued_at %}(mô phỏng){% else %}(thủ công){% endif %}.
+    </p>
+    {% endif %} {% if order.bill_issued_at %}
+    <p>
+      Xuất phiếu: {{ order.bill_issued_at|date:'d/m/Y H:i:s' }} · Hạn giao: {{ order.delivery_deadline_at|date:'d/m/Y H:i:s' }}.
+    </p>
+    {% if order.delivery_is_late %}
+    <p><strong>Đã quá hạn giao 60 phút.</strong></p>
+    {% else %}
+    <p>Chưa quá hạn giao theo dữ liệu hệ thống.</p>
+    {% endif %}{% endif %}
+    <p class="muted">
+      Nhân viên tự liên hệ đối tác giao nhận, hệ thống không đặt tài xế.
+    </p>
+  </div>
+  {% endif %}
+  <div class="order-items">
+    {% for item in order.items.all %}
+    <p>
+      <strong>{{ item.quantity }} × {{ item.product_name }}</strong>
+      <span class="muted">{{ item.sku }}</span>
+    </p>
+    <details>
+      <summary>Công thức đã chốt cho 1 ly</summary>
+      {% for line in item.recipe_snapshot %}
+      <p>{{ line.name }} · {{ line.quantity }} {{ line.unit }}</p>
+      {% empty %}
+      <p>
+        Đơn lịch sử chưa có bản ghi công thức. Chỉ cho phép pha chế khi xác minh
+        đủ định mức.
+      </p>
+      {% endfor %}
+    </details>
+    {% endfor %}
+  </div>
+  {% if order.fulfillment == 'PICKUP' and order.channel != 'APP' and not user|role:'ADMIN' %}<a class="button" href="{% url 'kitchen' %}"
+    >Xử lý và xem chi tiết tại bảng hàng chờ</a
+  >{% else %}{% if user|role:'ADMIN' %}
+  <p class="helptext">
+    Quản trị viên · xử lý ngoại lệ theo kiểm tra nghiệp vụ, không cho lùi trạng
+    thái.
+  </p>
+  {% endif %}
+  <form
+    method="post"
+    action="{% url 'transition' order.public_code %}"
+    class="queue-form"
+  >
+    {% csrf_token %}<label
+      >Chuyển trạng thái<select name="status">
+        {% for value,label in states %}{% if order.fulfillment == 'DELIVERY' or value != 'DELIVERING' and value != 'DELIVERY_FAILED' and value != 'PENDING_CONFIRMATION' %}
+        <option value="{{ value }}" {% if value == order.status %}selected{% endif %}>
+          {{ label }}
+        </option>
+        {% endif %}{% endfor %}
+      </select></label
+    ><label
+      >Lý do<input
+        name="reason"
+        maxlength="300"
+        placeholder="Ghi chú cho ca vận hành" /></label
+    ><button>Cập nhật đúng bước</button>
+  </form>
+  {% endif %}
+  <div class="form-actions">
+    {% if order.payment.method == 'EXTERNAL_DEMO' and order.payment.status == 'UNPAID' %}
+    <form
+      method="post"
+      action="{% url 'reconcile_external' order.public_code %}"
+    >
+      {% csrf_token %}<button class="quiet">
+        Ghi đối soát bên ngoài mô phỏng
+      </button>
+    </form>
+    {% elif order.payment.method == 'BANK_TRANSFER_DEMO' and order.payment.status == 'UNPAID' %}
+    <form
+      method="post"
+      action="{% url 'verify_demo_transfer' order.public_code %}"
+    >
+      {% csrf_token %}<button class="quiet">
+        Xác nhận chuyển khoản MÔ PHỎNG
+      </button>
+    </form>
+    {% elif order.payment.method != 'MOCK_ONLINE' and order.payment.status == 'UNPAID' %}{% if not demo_delivery_enabled or order.fulfillment != 'DELIVERY' or order.payment.method != 'COD' or order.status == 'COMPLETED' %}{% if order.channel != 'COUNTER' or order.fulfillment != 'PICKUP' or order.status == 'COMPLETED' %}
+    <form method="post" action="{% url 'cash' order.public_code %}">
+      {% csrf_token %}<button class="quiet">Ghi nhận thu tiền mô phỏng</button>
+    </form>
+    {% endif %}{% endif %}{% endif %}{% if can_refund and order.payment.status == 'REFUND_PENDING' %}
+    <form
+      method="post"
+      action="{% url 'refund' order.public_code %}"
+      data-confirm-refund
+    >
+      {% csrf_token %}<button class="quiet">Hoàn thanh toán mô phỏng</button>
+    </form>
+    {% endif %}
+  </div>
+  <details>
+    <summary>Lịch sử xử lý</summary>
+    <ol class="timeline">
+      {% for event in order.history.all %}{% if event.from_state != event.to_state %}
+      <li>
+        <time>{{ event.created_at|date:'d/m/Y H:i' }}</time>{{ event.from_state|vi_state }} → {{ event.to_state|vi_state }}
+        <p>{{ event.reason|vi_notice }}</p>
+      </li>
+      {% endif %}{% endfor %}
+    </ol>
+    <details>
+      <summary>Ghi nhận cùng trạng thái / từ chối lịch sử</summary>
+      <ul>
+        {% for event in order.history.all %}{% if event.from_state == event.to_state %}
+        <li>
+          {{ event.created_at|date:'d/m/Y H:i' }} · {{ event.reason|vi_notice }}
+        </li>
+        {% endif %}{% endfor %}
+      </ul>
+    </details>
+  </details>
+</article>
+{% empty %}
+<section class="empty-state">
+  <span class="empty-mark" aria-hidden="true">n.</span>
+  <h2>Ca này đang thảnh thơi.</h2>
+  <p>Chưa có đơn phù hợp. Thử trạng thái khác hoặc tạo đơn tại quầy.</p>
+  <a class="button" href="{% url 'new_manual' %}">Tạo đơn mới</a>
+</section>
+{% endfor %}{% include 'commerce/pagination.html' %} {% endblock %}

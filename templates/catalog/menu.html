@@ -1,0 +1,37 @@
+{% extends 'base.html' %}{% load static nau_ui %}
+{% block title %}Thực đơn{% endblock %}
+{% block body_class %}premium-menu-page{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'catalog/menu-layout.css' %}?v=20261121-dropdown">{% endblock %}
+{% block content %}
+<section class="premium-menu-hero" aria-labelledby="menu-heading"><div class="premium-menu-hero-content"><p class="eyebrow">CÀ PHÊ · TRÀ · MATCHA · CACAO</p><h1 id="menu-heading">Thực đơn NÂU COFFEE</h1><p>Khám phá những hương vị quen thuộc, được trình bày theo đúng nhóm đồ uống trong hệ thống.</p></div></section>
+<div class="premium-menu-content menu-browse">
+  <aside class="menu-sidebar" aria-label="Bộ lọc thực đơn">
+    <details class="menu-filter-disclosure" open>
+      <summary><span><span aria-hidden="true">☷</span> Bộ lọc thức uống</span><span class="menu-filter-chevron" aria-hidden="true">⌄</span></summary>
+      <form method="get" class="menu-filter-form" aria-controls="menu-results" action="{% url 'menu' %}">
+        <p class="menu-filter-intro">Chọn một chút đúng gu bạn.</p>
+        <label class="menu-search-label" for="menu-search">Tìm kiếm thức uống</label>
+        <div class="menu-search-control"><span aria-hidden="true">⌕</span><input id="menu-search" type="search" name="q" maxlength="150" value="{{ search_query }}" placeholder="Nhập tên món bạn muốn tìm..." autocomplete="off"><button type="button" class="menu-search-clear" aria-label="Xóa từ khóa tìm kiếm"{% if not search_query %} hidden{% endif %}>×</button></div>
+        <fieldset><legend>Nhóm thức uống</legend>
+          {% for category in categories %}<label class="menu-category-choice"><input type="checkbox" name="category" value="{{ category.slug }}"{% if request.GET.category == category.slug %} checked{% endif %}><span>{{ category.name }}</span></label>{% endfor %}
+        </fieldset>
+        <label class="menu-sort-label" for="menu-sort">Sắp xếp theo</label>
+        <select name="sort" id="menu-sort">
+          <option value="">Mặc định</option>
+          <option value="name"{% if request.GET.sort == 'name' %} selected{% endif %}>Tên A–Z</option>
+          <option value="name_desc"{% if request.GET.sort == 'name_desc' %} selected{% endif %}>Tên Z–A</option>
+          <option value="price_asc"{% if request.GET.sort == 'price_asc' %} selected{% endif %}>Giá thấp đến cao</option>
+          <option value="price_desc"{% if request.GET.sort == 'price_desc' %} selected{% endif %}>Giá cao đến thấp</option>
+        </select>
+      </form>
+    </details>
+  </aside>
+  <p class="menu-filter-status sr-only" role="status" aria-live="polite"></p>
+  <div class="menu-results" id="menu-results">
+  <div class="section-heading small"><p>{{ page_obj.paginator.count }} món phù hợp</p></div>
+  <div class="grid product-grid premium-menu-products">{% for product in page_obj %}{% include 'includes/product_card.html' %}{% empty %}<section class="empty-state"><h2>Không tìm thấy thức uống phù hợp.</h2><p>Vui lòng thử từ khóa khác.</p>{% if search_query %}<a class="text-link" data-clear-search href="{% url 'menu' %}{% if clear_search_querystring %}?{{ clear_search_querystring }}{% endif %}">Xóa từ khóa</a>{% endif %}</section>{% endfor %}</div>
+  <nav class="pagination" aria-label="Phân trang">{% if page_obj.has_previous %}<a href="?{{ querystring }}&page={{ page_obj.previous_page_number }}">← Trang trước</a>{% endif %}<span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>{% if page_obj.has_next %}<a href="?{{ querystring }}&page={{ page_obj.next_page_number }}">Trang sau →</a>{% endif %}</nav>
+  </div>
+</div>
+<script src="{% static 'catalog/menu-filters.js' %}?v=20261121-dropdown" defer></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'catalog/account_base.html' %}{% load static nau_ui %}
+{% block title %}Tài khoản của bạn{% endblock %}
+{% block page_styles %}{{ block.super }}<link rel="stylesheet" href="{% static 'catalog/account-overview.css' %}?v=20261121">{% endblock %}
+{% block account_content %}
+<section class="account-overview">
+<header class="account-welcome"><div><p class="eyebrow">TÀI KHOẢN CỦA BẠN</p><h1>Xin chào, {{ user.username }}</h1><p>Theo dõi đơn hàng và những quyền lợi của bạn tại Nâu.</p></div><a class="account-edit" href="{% url 'profile' %}">Chỉnh sửa hồ sơ ↗</a></header>
+<div class="account-metrics">
+<a href="{% url 'orders' %}?tab=processing" class="account-metric"><span class="account-metric-icon" aria-hidden="true">▤</span><div><span>Đơn đang xử lý</span><strong>{{ order_counts.active }}</strong></div><span aria-hidden="true">↗</span></a>
+<a href="{% url 'orders' %}?status=COMPLETED" class="account-metric"><span class="account-metric-icon" aria-hidden="true">✓</span><div><span>Đơn hoàn tất</span><strong>{{ order_counts.completed }}</strong></div><span aria-hidden="true">↗</span></a>
+<a href="{% url 'loyalty' %}" class="account-metric account-metric-points"><span class="account-metric-icon" aria-hidden="true">☆</span><div><span>Điểm thành viên</span><strong>{{ member_points }}</strong></div><span aria-hidden="true">↗</span></a>
+</div>
+<div class="account-overview-grid">
+<section class="account-overview-panel"><header class="account-panel-heading"><h2>Đơn hàng gần đây</h2><a href="{% url 'orders' %}">Xem tất cả →</a></header>
+{% for order in recent_orders %}<article class="account-recent-order"><div class="account-order-top"><a class="account-order-code" href="{% url 'order_detail' order.public_code %}" title="{{ order.public_code }}">#{{ order.public_code|stringformat:'s'|slice:':8' }}</a><span class="status-badge status-{{ order.status }}">{{ order.status|customer_state }}</span></div><p>{{ order.created_at|date:'d/m/Y · H:i' }} · {{ order.get_fulfillment_display }}</p><div class="account-order-bottom"><strong>{{ order.total|vnd }}</strong><a href="{% url 'order_detail' order.public_code %}">Xem chi tiết →</a></div></article>
+{% empty %}<div class="account-orders-empty"><span aria-hidden="true">☕</span><h3>Bạn chưa có đơn hàng nào</h3><p>Chọn một món yêu thích để bắt đầu lần ghé đầu tiên.</p><a class="button olive" href="{% url 'menu' %}">Xem thực đơn →</a></div>{% endfor %}</section>
+<aside class="account-overview-panel account-personal"><header class="account-panel-heading"><h2>Thông tin cá nhân</h2></header><dl><div><dt>Họ và tên</dt><dd>{% firstof customer_profile.full_name user.get_full_name 'Chưa cập nhật' %}</dd></div><div><dt>Email</dt><dd>{% firstof customer_profile.email user.email 'Chưa cập nhật' %}</dd></div><div><dt>Số điện thoại</dt><dd>{{ customer_profile.phone|default:'Chưa cập nhật' }}</dd></div></dl><a class="account-profile-link" href="{% url 'profile' %}">Cập nhật thông tin →</a><div class="account-help"><strong>Cần Nâu hỗ trợ?</strong><p>Gửi lời nhắn nếu bạn cần hỗ trợ về đơn hàng.</p><a href="{% url 'feedback' %}">Liên hệ với Nâu ↗</a></div></aside>
+</div></section>
+{% endblock %}

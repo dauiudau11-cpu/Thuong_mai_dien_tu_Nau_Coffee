@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "ordering",
+    "title": "Chính sách đặt hàng và nhận món",
+    "version": "2026.11.01-v1",
+    "body": "**1.1. Phạm vi áp dụng**\n\nNâu Coffee hỗ trợ khách hàng lựa chọn đồ uống, đặt hàng trước và nhận sản phẩm tại cửa hàng thông qua website.\n\nKhách hàng cần có tài khoản hợp lệ và đăng nhập trước khi xác nhận đặt hàng.\n\n**1.2. Quy trình đặt hàng**\n\n1. Đăng nhập hoặc đăng ký tài khoản.\n2. Lựa chọn sản phẩm, số lượng và tùy chọn hiện có.\n3. Kiểm tra giỏ hàng và tổng tiền.\n4. Kiểm tra giờ nhận sớm nhất còn chỗ do hệ thống tự chọn theo khung giờ phục vụ và thời gian chuẩn bị.\n5. Xem điều kiện mua hàng và xác nhận đặt hàng.\n6. Theo dõi trạng thái đơn hàng trong tài khoản.\n\n**1.3. Xác nhận đơn hàng**\n\nĐơn hàng được ghi nhận khi hệ thống tạo thành công mã đơn hàng.\n\nViệc chuẩn bị sản phẩm phụ thuộc vào tình trạng nguyên liệu, khả năng phục vụ và xác nhận của cửa hàng theo quy trình vận hành.\n\n**1.4. Nhận món**\n\nKhách hàng đến địa điểm đã xác nhận, cung cấp mã đơn hàng hoặc thông tin cần thiết để nhân viên đối chiếu.\n\nKhách hàng nên nhận đồ uống đúng thời gian hệ thống xác nhận để bảo đảm chất lượng.\n\nNếu đến muộn, chất lượng sản phẩm có thể bị ảnh hưởng do đặc tính của đồ uống pha chế.\n\nNếu cần hỗ trợ khi nhận món muộn, vui lòng liên hệ Nâu để được đối chiếu tình trạng đơn.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "shipping",
+    "title": "Chính sách vận chuyển và giao nhận",
+    "version": "2026.11.01-v1",
+    "body": "**2.1. Đơn hàng website**\n\nWebsite Nâu Coffee hiện hỗ trợ hình thức đặt trước và nhận tại cửa hàng (PICKUP).\n\nKhách hàng không phải trả phí vận chuyển cho đơn nhận tại cửa hàng.\n\n**2.2. Đơn hàng qua ứng dụng bên ngoài**\n\nNếu Nâu Coffee kinh doanh trên các ứng dụng giao đồ ăn, khách hàng thực hiện đặt hàng và thanh toán theo điều kiện của nền tảng tương ứng.\n\nPhạm vi phục vụ, phí giao hàng và thời gian giao dự kiến được xác định bởi nền tảng tại thời điểm đặt hàng.\n\nCác vấn đề liên quan đến vận chuyển được xử lý theo trách nhiệm của cửa hàng và đơn vị cung cấp dịch vụ.\n\n**2.3. Phạm vi cam kết**\n\nWebsite hiện không nhận đơn giao hàng trực tiếp, chưa tự động chỉ định tài xế và chưa tính phí giao hàng dựa trên địa chỉ khách.\n\nCác liên kết giao đồ ăn không đồng nghĩa website đã nhận đơn giao hàng hoặc đã tích hợp vận chuyển với nền tảng.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "cancellation",
+    "title": "Chính sách hủy và thay đổi đơn hàng",
+    "version": "2026.11.01-v1",
+    "body": "**3.1. Điều kiện hủy**\n\nKhách hàng có thể yêu cầu hủy khi đơn hàng chưa bước vào giai đoạn pha chế, theo trạng thái và chức năng được hệ thống cho phép.\n\nKhi sản phẩm đã bắt đầu pha chế, yêu cầu hủy do khách thay đổi nhu cầu có thể không được chấp thuận.\n\nCác trường hợp cửa hàng không thực hiện đúng cam kết hoặc sản phẩm phát sinh lỗi được xử lý riêng theo chính sách đổi trả và quy định pháp luật.\n\n**3.2. Cách yêu cầu hủy**\n\nKhách hàng sử dụng chức năng hủy đơn trong tài khoản khi đủ điều kiện hoặc liên hệ Nâu Coffee qua kênh hỗ trợ chính thức.\n\nYêu cầu hủy chỉ hoàn tất sau khi được hệ thống hoặc cửa hàng xác nhận.\n\n**3.3. Thay đổi đơn hàng**\n\nViệc thay đổi sản phẩm, số lượng hoặc thời gian nhận được xem xét dựa trên tiến độ xử lý.\n\nNếu hệ thống không hỗ trợ chỉnh sửa trực tiếp, cửa hàng có thể hướng dẫn hủy đơn hợp lệ và tạo đơn mới.\n\nMọi điều chỉnh hợp lệ cần được xác nhận, không làm sai lệch tổng tiền hoặc lịch sử giao dịch.\n\n**3.4. Hủy do cửa hàng**\n\nKhi hết nguyên liệu hoặc không thể thực hiện đơn, Nâu Coffee thông báo tình trạng và phương án giải quyết phù hợp.\n\nNếu đã nhận tiền thực tế mà không thể cung cấp sản phẩm, khoản tiền đã thu được xử lý theo chính sách hoàn tiền và quy định áp dụng.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "returns",
+    "title": "Chính sách đổi trả, hoàn tiền và chất lượng",
+    "version": "2026.11.01-v1",
+    "body": "**4.1. Nguyên tắc**\n\nĐồ uống được pha chế theo đơn và có thời hạn sử dụng ngắn nên không áp dụng đổi trả thông thường như hàng hóa lưu kho dài hạn.\n\nĐiều này không loại trừ trách nhiệm của Nâu Coffee khi sản phẩm có lỗi hoặc không đúng giao dịch đã xác nhận.\n\n**4.2. Trường hợp được hỗ trợ**\n\n- Giao sai sản phẩm.\n- Giao thiếu sản phẩm hoặc thành phần đã tính tiền.\n- Đồ uống bị hư hỏng trước khi bàn giao.\n- Sản phẩm có dấu hiệu bất thường về chất lượng.\n- Đơn hàng đã thu tiền nhưng không thể cung cấp sản phẩm.\n- Các trường hợp khác thuộc trách nhiệm cửa hàng theo pháp luật.\n\n**4.3. Quy trình xử lý**\n\nKhách hàng gửi mã đơn, mô tả vấn đề và hình ảnh nếu có qua kênh hỗ trợ.\n\nCửa hàng kiểm tra thông tin, xác minh tình trạng và đưa ra phương án giải quyết phù hợp.\n\n**4.4. Phương án giải quyết**\n\nCó thể bao gồm pha chế lại, bổ sung sản phẩm, hoàn lại khoản tiền tương ứng hoặc phương án khác được các bên thống nhất.\n\n**4.5. Hoàn tiền**\n\nChỉ hoàn khoản tiền đã thực sự thu.\n\nKhông coi giao dịch thanh toán mô phỏng là khoản tiền đã thu thực tế.\n\nPhương án, phương thức và thời điểm xử lý được thông báo sau khi xác minh. Các trạng thái hoàn tiền mô phỏng trên website không phát sinh khoản hoàn tiền thật.\n\n**4.6. Bảo đảm chất lượng**\n\nNâu Coffee tiếp nhận phản ánh liên quan đến chất lượng đồ uống, vệ sinh và an toàn sản phẩm.\n\nĐồ uống không có chế độ bảo hành kỹ thuật dài hạn.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "payment",
+    "title": "Chính sách thanh toán",
+    "version": "2026.11.01-v1",
+    "body": "**5.1. Giá bán**\n\nGiá sản phẩm được hiển thị bằng VND.\n\nKhách hàng được xem tổng tiền, khoản giảm giá và thông tin liên quan trước khi xác nhận đơn hàng.\n\nGiá WEB/COUNTER và APP tuân theo cấu hình giá từng kênh hiện hành.\n\n**5.2. Hình thức thanh toán**\n\nĐơn WEB nhận tại cửa hàng sử dụng thanh toán trực tuyến mô phỏng trước khi được đưa vào hàng chờ Staff. Website không thu tiền thật; không yêu cầu thanh toán thật lúc nhận món trong luồng này.\n\nNhững tính năng thanh toán online chưa kết nối với cổng thanh toán thật phải được thể hiện đúng trạng thái thử nghiệm hoặc không mở như phương thức thanh toán thật cho khách.\n\n**5.3. Xác nhận thanh toán**\n\nChỉ ghi nhận khoản tiền thực thu khi có xác nhận thanh toán hợp lệ.\n\nTrạng thái thanh toán mô phỏng không chứng minh đã có giao dịch tài chính thực tế.\n\n**5.4. Sai lệch**\n\nKhi có tranh chấp thanh toán, khách hàng liên hệ cửa hàng để đối chiếu mã đơn và thông tin liên quan.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "privacy",
+    "title": "Chính sách bảo mật và quyền riêng tư",
+    "version": "2026.11.01-v1",
+    "body": "**6.1. Bảo vệ thông tin của bạn**\n\nNâu Coffee tôn trọng quyền riêng tư và thực hiện các biện pháp phù hợp để bảo vệ thông tin cá nhân khi bạn sử dụng website. Chính sách này giải thích thông tin được sử dụng, mục đích, phạm vi tiếp cận và cách bạn thực hiện quyền của mình.\n\n**6.2. Thông tin được tiếp nhận**\n\n- Họ tên, số điện thoại, email, tên đăng nhập và thông tin xác thực tài khoản.\n- Thông tin đơn hàng, sản phẩm, lịch sử thanh toán mô phỏng và quyền lợi khuyến mãi.\n- Nội dung liên hệ, đánh giá, góp ý và khiếu nại do bạn cung cấp.\n- Cookie phục vụ đăng nhập, giỏ hàng và bảo vệ giao dịch; thông tin truy cập tối thiểu khi bạn cho phép thống kê tùy chọn.\n\n**6.3. Mục đích và lựa chọn của bạn**\n\nThông tin cần thiết được dùng để tạo, xác minh và bảo vệ tài khoản; thực hiện yêu cầu đặt hàng; quản lý quyền lợi voucher; hỗ trợ khách hàng; ngăn chặn gian lận và thực hiện nghĩa vụ pháp luật tương ứng. Việc thực hiện giao dịch và bảo đảm an toàn tài khoản được phân biệt với các hoạt động tùy chọn dựa trên sự đồng ý.\n\nEmail giới thiệu ưu đãi chỉ được sử dụng theo lựa chọn marketing riêng của bạn. Thống kê không thiết yếu chỉ được kích hoạt khi bạn chọn cho phép. Hai lựa chọn độc lập, mặc định không chọn và không phải điều kiện bắt buộc để tạo tài khoản hoặc đặt hàng. Bạn có thể thay đổi hoặc rút lại tại Tài khoản → Quyền riêng tư. Rút lại lựa chọn không ảnh hưởng giao dịch hợp lệ đã được xác nhận hoặc thông báo dịch vụ cần thiết.\n\n**6.4. Tiếp cận và chia sẻ**\n\nBạn được truy cập thông tin của chính mình. Nhân viên và người quản trị chỉ tiếp cận trong phạm vi quyền được cấp để xử lý giao dịch, hỗ trợ và bảo vệ hệ thống. Nâu không công khai thông tin liên hệ riêng tư trong lịch sử chấp thuận và không bán dữ liệu cá nhân.\n\nDữ liệu chỉ được cung cấp cho bên tham gia cung cấp dịch vụ trong phạm vi cần thiết, theo căn cứ phù hợp, hoặc cho cơ quan có thẩm quyền theo quy định áp dụng. Ở môi trường kiểm thử hiện tại, email xác minh và khôi phục được tiếp nhận trong hộp thư thử nghiệm, không chuyển đến hộp thư email thật của khách. Khi sử dụng thêm nhà cung cấp xử lý dữ liệu thực tế, Nâu cập nhật thông tin trước khi áp dụng. Liên kết mở Google Maps hoặc nền tảng giao đồ ăn dẫn sang dịch vụ bên ngoài, chịu thông báo quyền riêng tư của bên đó.\n\n**6.5. Lưu trữ**\n\nThông tin tài khoản được lưu trong thời gian cần thiết để duy trì tài khoản và xử lý những yêu cầu còn liên quan. Thông tin giao dịch, hỗ trợ và bằng chứng chấp thuận được lưu theo mục đích tương ứng, nhu cầu đối chiếu, giải quyết tranh chấp và nghĩa vụ pháp luật áp dụng. Dữ liệu trong bản sao dự phòng được giới hạn người tiếp cận; yêu cầu xử lý dữ liệu cần xem xét cả bản sao liên quan.\n\nHiện website chưa áp dụng việc tự động xóa toàn bộ dữ liệu theo một mốc thời gian cố định. Bạn có thể yêu cầu kiểm tra thời gian lưu đối với thông tin cụ thể, yêu cầu xóa hoặc hạn chế xử lý qua kênh bên dưới. Nâu xác minh và xử lý theo phạm vi quyền áp dụng; thông tin vẫn cần cho giao dịch, tranh chấp hoặc nghĩa vụ pháp luật không mặc nhiên bị xóa khi bạn rút lựa chọn marketing hoặc xóa cookie.\n\n**6.6. Quyền và cách gửi yêu cầu**\n\nBạn có thể yêu cầu biết, truy cập, chỉnh sửa thông tin; xóa hoặc hạn chế xử lý trong trường hợp áp dụng; rút sự đồng ý tùy chọn và gửi khiếu nại. Các quyền được thực hiện theo quy định pháp luật và điều kiện xác minh phù hợp, không bị giới hạn bởi chính sách này.\n\nGửi yêu cầu đến naucoffee.official@gmail.com, hotline 0824672384 hoặc biểu mẫu Liên hệ trên website. Nâu có thể yêu cầu thông tin cần thiết để xác minh danh tính và phạm vi yêu cầu trước khi cung cấp hoặc thay đổi dữ liệu. Không gửi mật khẩu, mã xác minh hoặc liên kết khôi phục qua kênh hỗ trợ.\n\n**6.7. Thay đổi chính sách**\n\nPhiên bản, ngày chính sách và thời điểm công bố thực tế được hiển thị trên website. Khi có thay đổi liên quan đáng kể, Nâu thông báo và yêu cầu xác nhận hoặc đồng ý lại khi cần. Việc công bố chính sách không có nghĩa mọi tài khoản cũ đã đồng ý; lựa chọn tùy chọn không được tự chuyển sang mục đích hoặc phiên bản mới.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "terms",
+    "title": "Chính sách khuyến mãi và điều khoản sử dụng",
+    "version": "2026.11.01-v1",
+    "body": "**7.1. Voucher công khai**\n\nVoucher PUBLIC áp dụng cho khách hàng đáp ứng điều kiện chương trình.\n\nMỗi khách được sử dụng tối đa một lượt theo cơ chế voucher hiện hành, trừ các chương trình cũ có quy tắc riêng.\n\n**7.2. Voucher VIP**\n\nVoucher PRIVATE dành riêng cho tài khoản được Nâu Coffee chỉ định.\n\nSố lượt sử dụng do Admin cấp cho từng khách, theo giới hạn chương trình.\n\n**7.3. Điều kiện chung**\n\n- Một voucher cho mỗi đơn hàng.\n- Voucher phải còn hiệu lực và đủ điều kiện.\n- Voucher được áp dụng cho WEB/COUNTER theo quy tắc hiện hành.\n- Đơn APP không sử dụng voucher Nâu Coffee.\n- Với voucher theo chính sách mới, lượt được tính khi tạo đơn thành công và không hoàn lại khi hủy đơn. Chương trình cũ tiếp tục áp dụng đúng chính sách và lịch sử sử dụng riêng của chương trình đó.\n- Voucher không mặc nhiên được đổi thành tiền mặt.\n\n**7.4. Trách nhiệm khách hàng**\n\nCung cấp thông tin chính xác, bảo vệ tài khoản và không lạm dụng chương trình khuyến mãi.\n\n**7.5. Trách nhiệm cửa hàng**\n\nCông bố rõ giá bán, điều kiện giao dịch và hỗ trợ giải quyết vấn đề theo quy định áp dụng.\n\n**7.6. Thay đổi điều khoản**\n\nChính sách có thể được cập nhật và công bố phiên bản mới. Không áp dụng hồi tố bất lợi cho giao dịch đã được xác nhận, trừ trường hợp có căn cứ pháp luật phù hợp.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "contact",
+    "title": "Chính sách liên hệ và hỗ trợ",
+    "version": "2026.11.01-v1",
+    "body": "**8.1. Kênh hỗ trợ**\n\n- Hotline: 0824672384.\n- Email: naucoffee.official@gmail.com.\n- Biểu mẫu Liên hệ trên website.\n- Biểu mẫu Phản hồi trên website.\n- Hỗ trợ tại cửa hàng: 457/9 Điện Biên Phủ, phường Bàn Cờ, Thành phố Hồ Chí Minh.\n\n**8.2. Nội dung hỗ trợ**\n\n- Thắc mắc sản phẩm.\n- Đặt hàng và nhận món.\n- Hủy hoặc thay đổi đơn.\n- Thanh toán.\n- Voucher.\n- Tài khoản.\n- Bảo mật thông tin.\n- Đánh giá, góp ý và khiếu nại.\n\n**8.3. Quy trình**\n\nKhách hàng gửi thông tin, cửa hàng tiếp nhận, phân loại, kiểm tra và thông báo phương án giải quyết.\n\nNâu thông báo tiến độ xử lý phù hợp với nội dung cần xác minh và thực hiện thời hạn bắt buộc khi pháp luật có quy định.\n\n**8.4. Bảo mật**\n\nKhách hàng không cần cung cấp mật khẩu, mã OTP hoặc token khôi phục tài khoản để được hỗ trợ.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "accounts",
+    "title": "Chính sách tài khoản khách hàng",
+    "version": "2026.11.01-v1",
+    "body": "**9.1. Đăng ký**\n\nKhách hàng cung cấp họ tên, số điện thoại, email, username và mật khẩu theo biểu mẫu hiện hành.\n\nEmail phải được xác minh theo quy trình hệ thống.\n\n**9.2. Quản lý tài khoản**\n\nKhách hàng có thể xem hồ sơ, lịch sử đơn hàng và những thông tin được hệ thống hỗ trợ quản lý.\n\n**9.3. Quên mật khẩu**\n\nKhách hàng sử dụng chức năng khôi phục qua email và liên kết có thời hạn.\n\nKhông yêu cầu nhân viên biết hoặc thiết lập mật khẩu thay khách.\n\n**9.4. Quyền truy cập**\n\nKhách hàng chỉ được xem dữ liệu đơn hàng thuộc tài khoản mình.\n\nAdmin/Staff chỉ được truy cập thông tin trong phạm vi quyền được cấp.\n\n**9.5. Bảo vệ tài khoản**\n\nNâu Coffee có thể áp dụng biện pháp ngăn chặn truy cập trái phép và hành vi gian lận theo điều kiện được công bố và pháp luật.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "reviews",
+    "title": "Chính sách đánh giá, góp ý và khiếu nại",
+    "version": "2026.11.01-v1",
+    "body": "**10.1. Đánh giá sản phẩm**\n\nKhách hàng được đánh giá sản phẩm theo điều kiện hệ thống, ưu tiên trải nghiệm mua hàng được xác minh.\n\n**10.2. Nội dung hợp lệ**\n\nĐánh giá cần trung thực, không chứa thông tin giả, xúc phạm, spam hoặc nội dung không liên quan.\n\n**10.3. Kiểm duyệt**\n\nNâu Coffee có thể kiểm tra nội dung theo quy tắc công bố, nhưng không tạo đánh giá giả hoặc gây hiểu nhầm về chất lượng.\n\n**10.4. Khiếu nại**\n\nKhách hàng cung cấp mã đơn và mô tả vấn đề để cửa hàng xác minh.\n\n**10.5. Quyền riêng tư**\n\nVui lòng không đưa email, số điện thoại hoặc thông tin riêng tư vào nội dung công khai. Nâu kiểm duyệt trước khi hiển thị đánh giá; nếu phát hiện thông tin riêng tư cần được bảo vệ, hãy liên hệ để được tiếp nhận và xử lý.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  },
+  {
+    "slug": "cookies",
+    "title": "Chính sách cookie và dữ liệu truy cập",
+    "version": "2026.11.01-v1",
+    "body": "**11.1. Cookie cần thiết**\n\nWebsite sử dụng cookie và phiên để đăng nhập, duy trì giỏ hàng, bảo vệ biểu mẫu và hỗ trợ các chức năng cần thiết. Bạn có thể quản lý cookie trong trình duyệt hoặc đăng xuất. Chặn cookie cần thiết có thể khiến đăng nhập và đặt hàng không hoạt động bình thường.\n\n**11.2. Thống kê tùy chọn**\n\nKhi bạn cho phép tại Tài khoản → Quyền riêng tư, Nâu ghi nhận thông tin truy cập tối thiểu như thời điểm, nhóm trang, nguồn truy cập, loại thiết bị, trạng thái đăng nhập và kết quả truy cập để hiểu việc sử dụng và cải thiện website. Thống kê dùng mã truy cập giả danh; không đưa email, nội dung đơn hàng hoặc mật khẩu vào bản ghi thống kê.\n\nKhách chưa chọn cho phép không tự được coi là đồng ý. Marketing và thống kê là hai lựa chọn riêng. Bạn có thể rút lại lựa chọn thống kê tại tài khoản; việc rút lại dừng ghi nhận thống kê tùy chọn tiếp theo, không làm mất đơn hàng.\n\n**11.3. Thời hạn và quyền kiểm soát**\n\nCookie thống kê khi được cho phép có thời hạn tối đa 30 ngày; đăng xuất hoặc xóa cookie được thực hiện qua tài khoản hoặc trình duyệt. Hết hạn cookie không đồng nghĩa tự xóa mọi thông tin đã ghi nhận trước đó. Thời gian lưu và yêu cầu xử lý dữ liệu được thực hiện theo Chính sách bảo mật và quyền riêng tư. Website hiện chưa có cơ chế tự động xóa toàn bộ lịch sử truy cập theo một thời hạn cố định.\n\n**11.4. Dịch vụ bên ngoài**\n\nNâu chưa kích hoạt Cloudflare hoặc công cụ quảng cáo bên ngoài trong website này. Khi bổ sung dịch vụ có xử lý dữ liệu hoặc công nghệ theo dõi mới, Nâu cập nhật thông báo và cung cấp lựa chọn cần thiết trước khi sử dụng. Các liên kết mở nền tảng bên ngoài được áp dụng chính sách riêng của nền tảng đó.",
+    "reviewed": true,
+    "policy_date": "2026-11-01",
+    "review_note": "Chủ dự án phê duyệt công bố trong nhiệm vụ Finalize Policy System & Restore Localhost ngày 17/11/2026. Ngày chính sách 01/11/2026; thời điểm công bố và chấp thuận ghi thực tế."
+  }
+]

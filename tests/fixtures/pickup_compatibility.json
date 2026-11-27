@@ -1,0 +1,2865 @@
+{
+  "format": "nau-pickup-anonymized-v1",
+  "user_ids": [
+    1,
+    2,
+    3
+  ],
+  "objects": [
+    {
+      "model": "catalog.category",
+      "pk": 1,
+      "fields": {
+        "name": "Cà phê",
+        "slug": "ca-phe",
+        "sort_order": 0,
+        "is_active": true
+      }
+    },
+    {
+      "model": "catalog.category",
+      "pk": 2,
+      "fields": {
+        "name": "Trà",
+        "slug": "tra",
+        "sort_order": 0,
+        "is_active": true
+      }
+    },
+    {
+      "model": "catalog.category",
+      "pk": 3,
+      "fields": {
+        "name": "Khác",
+        "slug": "khac",
+        "sort_order": 0,
+        "is_active": true
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "code": "CF01",
+        "name": "Cà phê đen",
+        "slug": "ca-phe-den-da",
+        "description": "Hương vị cà phê đậm đà, dành cho những ai yêu thích nét nguyên bản.",
+        "is_active": true,
+        "is_featured": true,
+        "created_at": "2026-10-13T05:06:59.793Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 2,
+      "fields": {
+        "category": 1,
+        "code": "CF02",
+        "name": "Cà phê sữa",
+        "slug": "ca-phe-sua-da",
+        "description": "Sự kết hợp giữa vị cà phê đậm và vị sữa ngọt dịu.",
+        "is_active": true,
+        "is_featured": true,
+        "created_at": "2026-10-13T05:06:59.801Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "code": "CF03",
+        "name": "Bạc xỉu",
+        "slug": "bac-xiu",
+        "description": "Hương sữa thơm béo hòa cùng chút cà phê nhẹ nhàng.",
+        "is_active": true,
+        "is_featured": true,
+        "created_at": "2026-10-13T05:06:59.808Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 4,
+      "fields": {
+        "category": 1,
+        "code": "CF04",
+        "name": "Cold Brew",
+        "slug": "cold-brew",
+        "description": "Cà phê ủ lạnh với hương vị êm dịu, dễ thưởng thức.",
+        "is_active": true,
+        "is_featured": true,
+        "created_at": "2026-10-13T05:06:59.814Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 5,
+      "fields": {
+        "category": 2,
+        "code": "TE01",
+        "name": "Trà đào",
+        "slug": "tra-dao",
+        "description": "Hương trà thanh mát kết hợp cùng vị đào thơm dịu.",
+        "is_active": true,
+        "is_featured": false,
+        "created_at": "2026-10-13T05:06:59.826Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 6,
+      "fields": {
+        "category": 2,
+        "code": "TE02",
+        "name": "Trà chanh",
+        "slug": "tra-chanh",
+        "description": "Vị trà thanh nhẹ hòa cùng hương chanh tươi mát.",
+        "is_active": true,
+        "is_featured": false,
+        "created_at": "2026-10-13T05:06:59.838Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 7,
+      "fields": {
+        "category": 3,
+        "code": "OT01",
+        "name": "Matcha",
+        "slug": "matcha-latte",
+        "description": "Hương trà xanh đặc trưng, cân bằng giữa vị thanh và độ béo dịu.",
+        "is_active": true,
+        "is_featured": false,
+        "created_at": "2026-10-13T05:06:59.850Z"
+      }
+    },
+    {
+      "model": "catalog.product",
+      "pk": 8,
+      "fields": {
+        "category": 3,
+        "code": "OT02",
+        "name": "Cacao sữa",
+        "slug": "cacao-sua-da",
+        "description": "Hương cacao thơm đậm hòa quyện cùng vị sữa dịu ngọt.",
+        "is_active": true,
+        "is_featured": false,
+        "created_at": "2026-10-13T05:06:59.861Z"
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 1,
+      "fields": {
+        "product": 1,
+        "sku": "CF01-STANDARD",
+        "size": "STANDARD",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 2,
+      "fields": {
+        "product": 2,
+        "sku": "CF02-STANDARD",
+        "size": "STANDARD",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 3,
+      "fields": {
+        "product": 3,
+        "sku": "CF03-STANDARD",
+        "size": "STANDARD",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 4,
+      "fields": {
+        "product": 4,
+        "sku": "CF04-M",
+        "size": "M",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 5,
+      "fields": {
+        "product": 4,
+        "sku": "CF04-L",
+        "size": "L",
+        "volume_ml": 500,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 6,
+      "fields": {
+        "product": 5,
+        "sku": "TE01-M",
+        "size": "M",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 7,
+      "fields": {
+        "product": 5,
+        "sku": "TE01-L",
+        "size": "L",
+        "volume_ml": 500,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 8,
+      "fields": {
+        "product": 6,
+        "sku": "TE02-M",
+        "size": "M",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 9,
+      "fields": {
+        "product": 6,
+        "sku": "TE02-L",
+        "size": "L",
+        "volume_ml": 500,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 10,
+      "fields": {
+        "product": 7,
+        "sku": "OT01-M",
+        "size": "M",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 11,
+      "fields": {
+        "product": 7,
+        "sku": "OT01-L",
+        "size": "L",
+        "volume_ml": 500,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 12,
+      "fields": {
+        "product": 8,
+        "sku": "OT02-M",
+        "size": "M",
+        "volume_ml": 350,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 13,
+      "fields": {
+        "product": 8,
+        "sku": "OT02-L",
+        "size": "L",
+        "volume_ml": 500,
+        "is_available": false
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 14,
+      "fields": {
+        "product": 1,
+        "sku": "CF01-360",
+        "size": "FIXED",
+        "volume_ml": 360,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 15,
+      "fields": {
+        "product": 2,
+        "sku": "CF02-360",
+        "size": "FIXED",
+        "volume_ml": 360,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 16,
+      "fields": {
+        "product": 3,
+        "sku": "CF03-360",
+        "size": "FIXED",
+        "volume_ml": 360,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 17,
+      "fields": {
+        "product": 4,
+        "sku": "CF04-500",
+        "size": "FIXED",
+        "volume_ml": 500,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 18,
+      "fields": {
+        "product": 5,
+        "sku": "TE01-700",
+        "size": "FIXED",
+        "volume_ml": 700,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 19,
+      "fields": {
+        "product": 6,
+        "sku": "TE02-700",
+        "size": "FIXED",
+        "volume_ml": 700,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 20,
+      "fields": {
+        "product": 7,
+        "sku": "OT01-700",
+        "size": "FIXED",
+        "volume_ml": 700,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.productvariant",
+      "pk": 21,
+      "fields": {
+        "product": 8,
+        "sku": "OT02-700",
+        "size": "FIXED",
+        "volume_ml": 700,
+        "is_available": true
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 1,
+      "fields": {
+        "variant": 1,
+        "channel": "WEB",
+        "original_price": 25000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 2,
+      "fields": {
+        "variant": 1,
+        "channel": "COUNTER",
+        "original_price": 25000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 3,
+      "fields": {
+        "variant": 1,
+        "channel": "APP",
+        "original_price": 30000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 4,
+      "fields": {
+        "variant": 2,
+        "channel": "WEB",
+        "original_price": 30000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 5,
+      "fields": {
+        "variant": 2,
+        "channel": "COUNTER",
+        "original_price": 30000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 6,
+      "fields": {
+        "variant": 2,
+        "channel": "APP",
+        "original_price": 35000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 7,
+      "fields": {
+        "variant": 3,
+        "channel": "WEB",
+        "original_price": 33000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 8,
+      "fields": {
+        "variant": 3,
+        "channel": "COUNTER",
+        "original_price": 33000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 9,
+      "fields": {
+        "variant": 3,
+        "channel": "APP",
+        "original_price": 39000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 10,
+      "fields": {
+        "variant": 4,
+        "channel": "WEB",
+        "original_price": 40000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 11,
+      "fields": {
+        "variant": 4,
+        "channel": "COUNTER",
+        "original_price": 40000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 12,
+      "fields": {
+        "variant": 4,
+        "channel": "APP",
+        "original_price": 47000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 13,
+      "fields": {
+        "variant": 5,
+        "channel": "WEB",
+        "original_price": 45000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 14,
+      "fields": {
+        "variant": 5,
+        "channel": "COUNTER",
+        "original_price": 45000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 15,
+      "fields": {
+        "variant": 5,
+        "channel": "APP",
+        "original_price": 52000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 16,
+      "fields": {
+        "variant": 6,
+        "channel": "WEB",
+        "original_price": 25000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 17,
+      "fields": {
+        "variant": 6,
+        "channel": "COUNTER",
+        "original_price": 25000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 18,
+      "fields": {
+        "variant": 6,
+        "channel": "APP",
+        "original_price": 42000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 19,
+      "fields": {
+        "variant": 7,
+        "channel": "WEB",
+        "original_price": 30000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 20,
+      "fields": {
+        "variant": 7,
+        "channel": "COUNTER",
+        "original_price": 30000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 21,
+      "fields": {
+        "variant": 7,
+        "channel": "APP",
+        "original_price": 47000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 22,
+      "fields": {
+        "variant": 8,
+        "channel": "WEB",
+        "original_price": 27000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 23,
+      "fields": {
+        "variant": 8,
+        "channel": "COUNTER",
+        "original_price": 27000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 24,
+      "fields": {
+        "variant": 8,
+        "channel": "APP",
+        "original_price": 32000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 25,
+      "fields": {
+        "variant": 9,
+        "channel": "WEB",
+        "original_price": 32000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 26,
+      "fields": {
+        "variant": 9,
+        "channel": "COUNTER",
+        "original_price": 32000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 27,
+      "fields": {
+        "variant": 9,
+        "channel": "APP",
+        "original_price": 37000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 28,
+      "fields": {
+        "variant": 10,
+        "channel": "WEB",
+        "original_price": 45000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 29,
+      "fields": {
+        "variant": 10,
+        "channel": "COUNTER",
+        "original_price": 45000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 30,
+      "fields": {
+        "variant": 10,
+        "channel": "APP",
+        "original_price": 52000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 31,
+      "fields": {
+        "variant": 11,
+        "channel": "WEB",
+        "original_price": 50000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 32,
+      "fields": {
+        "variant": 11,
+        "channel": "COUNTER",
+        "original_price": 50000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 33,
+      "fields": {
+        "variant": 11,
+        "channel": "APP",
+        "original_price": 57000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 34,
+      "fields": {
+        "variant": 12,
+        "channel": "WEB",
+        "original_price": 39000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 35,
+      "fields": {
+        "variant": 12,
+        "channel": "COUNTER",
+        "original_price": 39000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 36,
+      "fields": {
+        "variant": 12,
+        "channel": "APP",
+        "original_price": 45000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 37,
+      "fields": {
+        "variant": 13,
+        "channel": "WEB",
+        "original_price": 44000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 38,
+      "fields": {
+        "variant": 13,
+        "channel": "COUNTER",
+        "original_price": 44000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 39,
+      "fields": {
+        "variant": 13,
+        "channel": "APP",
+        "original_price": 50000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 40,
+      "fields": {
+        "variant": 14,
+        "channel": "WEB",
+        "original_price": 28000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 41,
+      "fields": {
+        "variant": 14,
+        "channel": "COUNTER",
+        "original_price": 28000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 42,
+      "fields": {
+        "variant": 14,
+        "channel": "APP",
+        "original_price": 37000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 43,
+      "fields": {
+        "variant": 15,
+        "channel": "WEB",
+        "original_price": 32000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 44,
+      "fields": {
+        "variant": 15,
+        "channel": "COUNTER",
+        "original_price": 32000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 45,
+      "fields": {
+        "variant": 15,
+        "channel": "APP",
+        "original_price": 43000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 46,
+      "fields": {
+        "variant": 16,
+        "channel": "WEB",
+        "original_price": 33000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 47,
+      "fields": {
+        "variant": 16,
+        "channel": "COUNTER",
+        "original_price": 33000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 48,
+      "fields": {
+        "variant": 16,
+        "channel": "APP",
+        "original_price": 44000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 49,
+      "fields": {
+        "variant": 17,
+        "channel": "WEB",
+        "original_price": 40000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 50,
+      "fields": {
+        "variant": 17,
+        "channel": "COUNTER",
+        "original_price": 40000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 51,
+      "fields": {
+        "variant": 17,
+        "channel": "APP",
+        "original_price": 54000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 52,
+      "fields": {
+        "variant": 18,
+        "channel": "WEB",
+        "original_price": 38000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 53,
+      "fields": {
+        "variant": 18,
+        "channel": "COUNTER",
+        "original_price": 38000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 54,
+      "fields": {
+        "variant": 18,
+        "channel": "APP",
+        "original_price": 51000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 55,
+      "fields": {
+        "variant": 19,
+        "channel": "WEB",
+        "original_price": 34000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 56,
+      "fields": {
+        "variant": 19,
+        "channel": "COUNTER",
+        "original_price": 34000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 57,
+      "fields": {
+        "variant": 19,
+        "channel": "APP",
+        "original_price": 46000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 58,
+      "fields": {
+        "variant": 20,
+        "channel": "WEB",
+        "original_price": 49000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 59,
+      "fields": {
+        "variant": 20,
+        "channel": "COUNTER",
+        "original_price": 49000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 60,
+      "fields": {
+        "variant": 20,
+        "channel": "APP",
+        "original_price": 66000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 61,
+      "fields": {
+        "variant": 21,
+        "channel": "WEB",
+        "original_price": 46000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 62,
+      "fields": {
+        "variant": 21,
+        "channel": "COUNTER",
+        "original_price": 46000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.channelprice",
+      "pk": 63,
+      "fields": {
+        "variant": 21,
+        "channel": "APP",
+        "original_price": 62000,
+        "sale_price": null,
+        "sale_starts_at": null,
+        "sale_ends_at": null
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 1,
+      "fields": {
+        "variant": 14,
+        "ingredient_cost": 7000
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 2,
+      "fields": {
+        "variant": 15,
+        "ingredient_cost": 8000
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 3,
+      "fields": {
+        "variant": 16,
+        "ingredient_cost": 8250
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 4,
+      "fields": {
+        "variant": 17,
+        "ingredient_cost": 10000
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 5,
+      "fields": {
+        "variant": 18,
+        "ingredient_cost": 9500
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 6,
+      "fields": {
+        "variant": 19,
+        "ingredient_cost": 8500
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 7,
+      "fields": {
+        "variant": 20,
+        "ingredient_cost": 12250
+      }
+    },
+    {
+      "model": "catalog.standardcost",
+      "pk": 8,
+      "fields": {
+        "variant": 21,
+        "ingredient_cost": 11500
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 1,
+      "fields": {
+        "sku": "NL01",
+        "name": "Cốt cà phê",
+        "unit": "ml",
+        "low_stock_threshold": "10000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 2,
+      "fields": {
+        "sku": "NL02",
+        "name": "Cà phê ủ lạnh",
+        "unit": "ml",
+        "low_stock_threshold": "20000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 3,
+      "fields": {
+        "sku": "NL03",
+        "name": "Cốt trà",
+        "unit": "ml",
+        "low_stock_threshold": "37500.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 4,
+      "fields": {
+        "sku": "NL04",
+        "name": "Nước lọc",
+        "unit": "ml",
+        "low_stock_threshold": "40000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 5,
+      "fields": {
+        "sku": "NL05",
+        "name": "Sữa tươi",
+        "unit": "ml",
+        "low_stock_threshold": "50000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 6,
+      "fields": {
+        "sku": "NL06",
+        "name": "Sữa đặc",
+        "unit": "ml",
+        "low_stock_threshold": "7500.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 7,
+      "fields": {
+        "sku": "NL07",
+        "name": "Siro đào",
+        "unit": "ml",
+        "low_stock_threshold": "3000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 8,
+      "fields": {
+        "sku": "NL08",
+        "name": "Đào miếng",
+        "unit": "g",
+        "low_stock_threshold": "6000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 9,
+      "fields": {
+        "sku": "NL09",
+        "name": "Nước cốt chanh",
+        "unit": "ml",
+        "low_stock_threshold": "2000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 10,
+      "fields": {
+        "sku": "NL10",
+        "name": "Siro đường",
+        "unit": "ml",
+        "low_stock_threshold": "6000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 11,
+      "fields": {
+        "sku": "NL11",
+        "name": "Bột matcha",
+        "unit": "g",
+        "low_stock_threshold": "500.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 12,
+      "fields": {
+        "sku": "NL12",
+        "name": "Bột cacao",
+        "unit": "g",
+        "low_stock_threshold": "1750.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 13,
+      "fields": {
+        "sku": "NL13",
+        "name": "Đá viên",
+        "unit": "g",
+        "low_stock_threshold": "125000.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 14,
+      "fields": {
+        "sku": "NL14",
+        "name": "Ly đựng",
+        "unit": "piece",
+        "low_stock_threshold": "600.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.ingredient",
+      "pk": 15,
+      "fields": {
+        "sku": "NL15",
+        "name": "Nắp ly",
+        "unit": "piece",
+        "low_stock_threshold": "600.000",
+        "is_active": true
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 1,
+      "fields": {
+        "variant": 14,
+        "ingredient": 1,
+        "quantity": "65.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 2,
+      "fields": {
+        "variant": 14,
+        "ingredient": 4,
+        "quantity": "130.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 3,
+      "fields": {
+        "variant": 14,
+        "ingredient": 13,
+        "quantity": "160.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 4,
+      "fields": {
+        "variant": 14,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 5,
+      "fields": {
+        "variant": 14,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 6,
+      "fields": {
+        "variant": 15,
+        "ingredient": 1,
+        "quantity": "55.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 7,
+      "fields": {
+        "variant": 15,
+        "ingredient": 6,
+        "quantity": "35.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 8,
+      "fields": {
+        "variant": 15,
+        "ingredient": 4,
+        "quantity": "90.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 9,
+      "fields": {
+        "variant": 15,
+        "ingredient": 13,
+        "quantity": "160.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 10,
+      "fields": {
+        "variant": 15,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 11,
+      "fields": {
+        "variant": 15,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 12,
+      "fields": {
+        "variant": 16,
+        "ingredient": 1,
+        "quantity": "30.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 13,
+      "fields": {
+        "variant": 16,
+        "ingredient": 5,
+        "quantity": "120.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 14,
+      "fields": {
+        "variant": 16,
+        "ingredient": 6,
+        "quantity": "35.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 15,
+      "fields": {
+        "variant": 16,
+        "ingredient": 13,
+        "quantity": "150.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 16,
+      "fields": {
+        "variant": 16,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 17,
+      "fields": {
+        "variant": 16,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 18,
+      "fields": {
+        "variant": 17,
+        "ingredient": 2,
+        "quantity": "280.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 19,
+      "fields": {
+        "variant": 17,
+        "ingredient": 4,
+        "quantity": "50.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 20,
+      "fields": {
+        "variant": 17,
+        "ingredient": 13,
+        "quantity": "180.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 21,
+      "fields": {
+        "variant": 17,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 22,
+      "fields": {
+        "variant": 17,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 23,
+      "fields": {
+        "variant": 18,
+        "ingredient": 3,
+        "quantity": "250.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 24,
+      "fields": {
+        "variant": 18,
+        "ingredient": 7,
+        "quantity": "40.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 25,
+      "fields": {
+        "variant": 18,
+        "ingredient": 8,
+        "quantity": "80.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 26,
+      "fields": {
+        "variant": 18,
+        "ingredient": 4,
+        "quantity": "90.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 27,
+      "fields": {
+        "variant": 18,
+        "ingredient": 13,
+        "quantity": "260.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 28,
+      "fields": {
+        "variant": 18,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 29,
+      "fields": {
+        "variant": 18,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 30,
+      "fields": {
+        "variant": 19,
+        "ingredient": 3,
+        "quantity": "270.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 31,
+      "fields": {
+        "variant": 19,
+        "ingredient": 9,
+        "quantity": "25.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 32,
+      "fields": {
+        "variant": 19,
+        "ingredient": 10,
+        "quantity": "40.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 33,
+      "fields": {
+        "variant": 19,
+        "ingredient": 4,
+        "quantity": "80.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 34,
+      "fields": {
+        "variant": 19,
+        "ingredient": 13,
+        "quantity": "270.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 35,
+      "fields": {
+        "variant": 19,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 36,
+      "fields": {
+        "variant": 19,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 37,
+      "fields": {
+        "variant": 20,
+        "ingredient": 11,
+        "quantity": "7.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 38,
+      "fields": {
+        "variant": 20,
+        "ingredient": 5,
+        "quantity": "300.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 39,
+      "fields": {
+        "variant": 20,
+        "ingredient": 10,
+        "quantity": "35.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 40,
+      "fields": {
+        "variant": 20,
+        "ingredient": 4,
+        "quantity": "60.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 41,
+      "fields": {
+        "variant": 20,
+        "ingredient": 13,
+        "quantity": "260.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 42,
+      "fields": {
+        "variant": 20,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 43,
+      "fields": {
+        "variant": 20,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 44,
+      "fields": {
+        "variant": 21,
+        "ingredient": 12,
+        "quantity": "22.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 45,
+      "fields": {
+        "variant": 21,
+        "ingredient": 5,
+        "quantity": "280.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 46,
+      "fields": {
+        "variant": 21,
+        "ingredient": 6,
+        "quantity": "35.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 47,
+      "fields": {
+        "variant": 21,
+        "ingredient": 4,
+        "quantity": "80.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 48,
+      "fields": {
+        "variant": 21,
+        "ingredient": 13,
+        "quantity": "250.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 49,
+      "fields": {
+        "variant": 21,
+        "ingredient": 14,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.recipeline",
+      "pk": 50,
+      "fields": {
+        "variant": 21,
+        "ingredient": 15,
+        "quantity": "1.000"
+      }
+    },
+    {
+      "model": "commerce.storesettings",
+      "pk": 6,
+      "fields": {
+        "name": "DEMO",
+        "delivery_fee": 15000,
+        "free_delivery_min": 200000,
+        "opens_at": "07:00:00",
+        "closes_at": "22:00:00",
+        "lead_minutes": 15,
+        "preorder_days": 7,
+        "slot_capacity": 10,
+        "loyalty_vnd_per_point": 10000
+      }
+    },
+    {
+      "model": "commerce.voucher",
+      "pk": 1,
+      "fields": {
+        "created_at": "2026-11-06T06:20:24.516Z",
+        "updated_at": "2026-11-06T06:20:24.516Z",
+        "code": "1231212",
+        "kind": "FIXED",
+        "amount": 25000,
+        "cap": 0,
+        "min_subtotal": 0,
+        "max_uses": 100,
+        "per_user_limit": 1,
+        "starts_at": "2026-11-06T06:19:47Z",
+        "ends_at": "2026-11-29T17:00:00Z",
+        "is_active": true,
+        "allow_sale_stacking": true
+      }
+    },
+    {
+      "model": "commerce.order",
+      "pk": 1,
+      "fields": {
+        "created_at": "2026-10-13T05:42:24.433Z",
+        "updated_at": "2026-10-13T05:42:24.433Z",
+        "public_code": "de18a5ce-1e57-579c-a7af-298f39a7a51b",
+        "user": 1,
+        "placed_by": null,
+        "channel": "WEB",
+        "fulfillment": "PICKUP",
+        "customer_name": "Anonymized historical fixture",
+        "phone": "0900000000",
+        "address": "",
+        "notes": "",
+        "scheduled_for": null,
+        "delivery_verified": false,
+        "delivery_distance_km": null,
+        "bill_issued_at": null,
+        "delivery_deadline_at": null,
+        "delivered_at": null,
+        "external_reference": "",
+        "subtotal": 75000,
+        "discount": 0,
+        "shipping": 0,
+        "total": 75000,
+        "status": "CONFIRMED",
+        "idempotency_key": "e8412a66-9cd8-5503-8df0-c4d64f2f05a7"
+      }
+    },
+    {
+      "model": "commerce.order",
+      "pk": 2,
+      "fields": {
+        "created_at": "2026-11-06T03:28:00.529Z",
+        "updated_at": "2026-11-06T03:28:48.689Z",
+        "public_code": "e7e25424-739e-56ef-affe-904c210f89be",
+        "user": 1,
+        "placed_by": null,
+        "channel": "WEB",
+        "fulfillment": "DELIVERY",
+        "customer_name": "Anonymized historical fixture",
+        "phone": "0900000000",
+        "address": "Anonymized historical fixture",
+        "notes": "",
+        "scheduled_for": "2026-11-06T03:45:00Z",
+        "delivery_verified": false,
+        "delivery_distance_km": "2.40",
+        "bill_issued_at": null,
+        "delivery_deadline_at": null,
+        "delivered_at": null,
+        "external_reference": "",
+        "subtotal": 33000,
+        "discount": 0,
+        "shipping": 25000,
+        "total": 58000,
+        "status": "CANCELLED",
+        "idempotency_key": "ca91a0d3-b570-580e-8162-93edd50e04e2"
+      }
+    },
+    {
+      "model": "commerce.order",
+      "pk": 3,
+      "fields": {
+        "created_at": "2026-11-06T03:31:11.272Z",
+        "updated_at": "2026-11-06T03:31:24.116Z",
+        "public_code": "a058751e-76c6-5d4b-b5b7-ead4e0574c13",
+        "user": 1,
+        "placed_by": null,
+        "channel": "WEB",
+        "fulfillment": "PICKUP",
+        "customer_name": "Anonymized historical fixture",
+        "phone": "0900000000",
+        "address": "",
+        "notes": "",
+        "scheduled_for": "2026-11-06T04:00:00Z",
+        "delivery_verified": false,
+        "delivery_distance_km": null,
+        "bill_issued_at": null,
+        "delivery_deadline_at": null,
+        "delivered_at": null,
+        "external_reference": "",
+        "subtotal": 33000,
+        "discount": 0,
+        "shipping": 0,
+        "total": 33000,
+        "status": "CANCELLED",
+        "idempotency_key": "33d4ccc6-251c-52b7-ba0c-8e693e739be2"
+      }
+    },
+    {
+      "model": "commerce.order",
+      "pk": 4,
+      "fields": {
+        "created_at": "2026-11-06T05:55:55.219Z",
+        "updated_at": "2026-11-06T05:57:09.444Z",
+        "public_code": "a714f301-4609-5673-a407-938a300927af",
+        "user": 1,
+        "placed_by": null,
+        "channel": "WEB",
+        "fulfillment": "PICKUP",
+        "customer_name": "Anonymized historical fixture",
+        "phone": "0900000000",
+        "address": "",
+        "notes": "",
+        "scheduled_for": "2026-11-06T06:15:00Z",
+        "delivery_verified": false,
+        "delivery_distance_km": null,
+        "bill_issued_at": null,
+        "delivery_deadline_at": null,
+        "delivered_at": null,
+        "external_reference": "",
+        "subtotal": 46000,
+        "discount": 0,
+        "shipping": 0,
+        "total": 46000,
+        "status": "READY",
+        "idempotency_key": "f89c47df-844d-5837-ad1e-499dd7468412"
+      }
+    },
+    {
+      "model": "commerce.order",
+      "pk": 5,
+      "fields": {
+        "created_at": "2026-11-06T06:21:38.811Z",
+        "updated_at": "2026-11-06T06:21:55.960Z",
+        "public_code": "e7287c1d-703b-534a-9209-fdfbc2f52251",
+        "user": 1,
+        "placed_by": null,
+        "channel": "WEB",
+        "fulfillment": "PICKUP",
+        "customer_name": "Anonymized historical fixture",
+        "phone": "0900000000",
+        "address": "",
+        "notes": "",
+        "scheduled_for": "2026-11-06T06:45:00Z",
+        "delivery_verified": false,
+        "delivery_distance_km": null,
+        "bill_issued_at": null,
+        "delivery_deadline_at": null,
+        "delivered_at": null,
+        "external_reference": "",
+        "subtotal": 40000,
+        "discount": 0,
+        "shipping": 0,
+        "total": 40000,
+        "status": "CANCELLED",
+        "idempotency_key": "a0fa3c66-73c1-574d-a869-d247a128b2e1"
+      }
+    },
+    {
+      "model": "commerce.orderitem",
+      "pk": 1,
+      "fields": {
+        "order": 1,
+        "variant": 1,
+        "product_name": "Cà phê đen đá",
+        "sku": "CF01-STANDARD",
+        "options_snapshot": [],
+        "recipe_snapshot": null,
+        "unit_price": 25000,
+        "quantity": 3,
+        "line_total": 75000
+      }
+    },
+    {
+      "model": "commerce.orderitem",
+      "pk": 2,
+      "fields": {
+        "order": 2,
+        "variant": 16,
+        "product_name": "Bạc xỉu",
+        "sku": "CF03-360",
+        "options_snapshot": [],
+        "recipe_snapshot": [
+          {
+            "name": "Cốt cà phê",
+            "unit": "ml",
+            "quantity": "30.000",
+            "ingredient_id": 1
+          },
+          {
+            "name": "Sữa tươi",
+            "unit": "ml",
+            "quantity": "120.000",
+            "ingredient_id": 5
+          },
+          {
+            "name": "Sữa đặc",
+            "unit": "ml",
+            "quantity": "35.000",
+            "ingredient_id": 6
+          },
+          {
+            "name": "Đá viên",
+            "unit": "g",
+            "quantity": "150.000",
+            "ingredient_id": 13
+          },
+          {
+            "name": "Ly đựng",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 14
+          },
+          {
+            "name": "Nắp ly",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 15
+          }
+        ],
+        "unit_price": 33000,
+        "quantity": 1,
+        "line_total": 33000
+      }
+    },
+    {
+      "model": "commerce.orderitem",
+      "pk": 3,
+      "fields": {
+        "order": 3,
+        "variant": 16,
+        "product_name": "Bạc xỉu",
+        "sku": "CF03-360",
+        "options_snapshot": [],
+        "recipe_snapshot": [
+          {
+            "name": "Cốt cà phê",
+            "unit": "ml",
+            "quantity": "30.000",
+            "ingredient_id": 1
+          },
+          {
+            "name": "Sữa tươi",
+            "unit": "ml",
+            "quantity": "120.000",
+            "ingredient_id": 5
+          },
+          {
+            "name": "Sữa đặc",
+            "unit": "ml",
+            "quantity": "35.000",
+            "ingredient_id": 6
+          },
+          {
+            "name": "Đá viên",
+            "unit": "g",
+            "quantity": "150.000",
+            "ingredient_id": 13
+          },
+          {
+            "name": "Ly đựng",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 14
+          },
+          {
+            "name": "Nắp ly",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 15
+          }
+        ],
+        "unit_price": 33000,
+        "quantity": 1,
+        "line_total": 33000
+      }
+    },
+    {
+      "model": "commerce.orderitem",
+      "pk": 4,
+      "fields": {
+        "order": 4,
+        "variant": 21,
+        "product_name": "Cacao sữa",
+        "sku": "OT02-700",
+        "options_snapshot": [],
+        "recipe_snapshot": [
+          {
+            "name": "Nước lọc",
+            "unit": "ml",
+            "quantity": "80.000",
+            "ingredient_id": 4
+          },
+          {
+            "name": "Sữa tươi",
+            "unit": "ml",
+            "quantity": "280.000",
+            "ingredient_id": 5
+          },
+          {
+            "name": "Sữa đặc",
+            "unit": "ml",
+            "quantity": "35.000",
+            "ingredient_id": 6
+          },
+          {
+            "name": "Bột cacao",
+            "unit": "g",
+            "quantity": "22.000",
+            "ingredient_id": 12
+          },
+          {
+            "name": "Đá viên",
+            "unit": "g",
+            "quantity": "250.000",
+            "ingredient_id": 13
+          },
+          {
+            "name": "Ly đựng",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 14
+          },
+          {
+            "name": "Nắp ly",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 15
+          }
+        ],
+        "unit_price": 46000,
+        "quantity": 1,
+        "line_total": 46000
+      }
+    },
+    {
+      "model": "commerce.orderitem",
+      "pk": 5,
+      "fields": {
+        "order": 5,
+        "variant": 17,
+        "product_name": "Cold Brew",
+        "sku": "CF04-500",
+        "options_snapshot": [],
+        "recipe_snapshot": [
+          {
+            "name": "Cà phê ủ lạnh",
+            "unit": "ml",
+            "quantity": "280.000",
+            "ingredient_id": 2
+          },
+          {
+            "name": "Nước lọc",
+            "unit": "ml",
+            "quantity": "50.000",
+            "ingredient_id": 4
+          },
+          {
+            "name": "Đá viên",
+            "unit": "g",
+            "quantity": "180.000",
+            "ingredient_id": 13
+          },
+          {
+            "name": "Ly đựng",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 14
+          },
+          {
+            "name": "Nắp ly",
+            "unit": "piece",
+            "quantity": "1.000",
+            "ingredient_id": 15
+          }
+        ],
+        "unit_price": 40000,
+        "quantity": 1,
+        "line_total": 40000
+      }
+    },
+    {
+      "model": "commerce.payment",
+      "pk": 1,
+      "fields": {
+        "created_at": "2026-10-13T05:42:24.436Z",
+        "updated_at": "2026-10-30T18:03:42.391Z",
+        "order": 1,
+        "token": "ef814278-3105-504d-a4a3-5564f90901b5",
+        "method": "PAY_AT_PICKUP",
+        "status": "PAID",
+        "amount": 75000,
+        "paid_at": "2026-10-30T18:03:42.391Z",
+        "refunded_at": null
+      }
+    },
+    {
+      "model": "commerce.payment",
+      "pk": 2,
+      "fields": {
+        "created_at": "2026-11-06T03:28:00.531Z",
+        "updated_at": "2026-11-06T03:28:00.531Z",
+        "order": 2,
+        "token": "0480d190-9b7d-5ef1-a881-d1932ab50341",
+        "method": "COD",
+        "status": "UNPAID",
+        "amount": 58000,
+        "paid_at": null,
+        "refunded_at": null
+      }
+    },
+    {
+      "model": "commerce.payment",
+      "pk": 3,
+      "fields": {
+        "created_at": "2026-11-06T03:31:11.273Z",
+        "updated_at": "2026-11-06T03:31:11.273Z",
+        "order": 3,
+        "token": "d075fca8-68b1-5dbb-8a8f-2c37c612ffe4",
+        "method": "PAY_AT_PICKUP",
+        "status": "UNPAID",
+        "amount": 33000,
+        "paid_at": null,
+        "refunded_at": null
+      }
+    },
+    {
+      "model": "commerce.payment",
+      "pk": 4,
+      "fields": {
+        "created_at": "2026-11-06T05:55:55.222Z",
+        "updated_at": "2026-11-06T05:56:28.047Z",
+        "order": 4,
+        "token": "cc26bbd2-7adc-5fdc-b43d-263efe639fdb",
+        "method": "PAY_AT_PICKUP",
+        "status": "PAID",
+        "amount": 46000,
+        "paid_at": "2026-11-06T05:56:28.047Z",
+        "refunded_at": null
+      }
+    },
+    {
+      "model": "commerce.payment",
+      "pk": 5,
+      "fields": {
+        "created_at": "2026-11-06T06:21:38.813Z",
+        "updated_at": "2026-11-06T06:21:38.813Z",
+        "order": 5,
+        "token": "196ebd4d-486e-57c6-82ad-46847f22473b",
+        "method": "PAY_AT_PICKUP",
+        "status": "UNPAID",
+        "amount": 40000,
+        "paid_at": null,
+        "refunded_at": null
+      }
+    },
+    {
+      "model": "commerce.paymentevent",
+      "pk": 1,
+      "fields": {
+        "payment": 1,
+        "event_key": "cash_demo",
+        "actor": 3,
+        "created_at": "2026-10-30T18:03:42.394Z"
+      }
+    },
+    {
+      "model": "commerce.paymentevent",
+      "pk": 2,
+      "fields": {
+        "payment": 4,
+        "event_key": "cash_demo",
+        "actor": 2,
+        "created_at": "2026-11-06T05:56:28.052Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 1,
+      "fields": {
+        "order": 1,
+        "from_state": "",
+        "to_state": "CONFIRMED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-10-13T05:42:24.437Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 2,
+      "fields": {
+        "order": 2,
+        "from_state": "",
+        "to_state": "PENDING_CONFIRMATION",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T03:28:00.532Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 3,
+      "fields": {
+        "order": 2,
+        "from_state": "PENDING_CONFIRMATION",
+        "to_state": "CANCELLED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T03:28:48.688Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 4,
+      "fields": {
+        "order": 3,
+        "from_state": "",
+        "to_state": "CONFIRMED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T03:31:11.274Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 5,
+      "fields": {
+        "order": 3,
+        "from_state": "CONFIRMED",
+        "to_state": "CANCELLED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T03:31:24.116Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 6,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:49:26.994Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 7,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:51:33.845Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 8,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:51:56.840Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 9,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:52:18.492Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 10,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:52:29.566Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 11,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:53:39.806Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 12,
+      "fields": {
+        "order": 4,
+        "from_state": "",
+        "to_state": "CONFIRMED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:55:55.222Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 13,
+      "fields": {
+        "order": 4,
+        "from_state": "CONFIRMED",
+        "to_state": "PREPARING",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:56:44.888Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 14,
+      "fields": {
+        "order": 4,
+        "from_state": "PREPARING",
+        "to_state": "READY",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:57:09.444Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 15,
+      "fields": {
+        "order": 4,
+        "from_state": "READY",
+        "to_state": "READY",
+        "actor": 2,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T05:58:50.532Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 16,
+      "fields": {
+        "order": 1,
+        "from_state": "CONFIRMED",
+        "to_state": "CONFIRMED",
+        "actor": 3,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T06:18:18.953Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 17,
+      "fields": {
+        "order": 5,
+        "from_state": "",
+        "to_state": "CONFIRMED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T06:21:38.813Z"
+      }
+    },
+    {
+      "model": "commerce.orderstatushistory",
+      "pk": 18,
+      "fields": {
+        "order": 5,
+        "from_state": "CONFIRMED",
+        "to_state": "CANCELLED",
+        "actor": 1,
+        "reason": "Anonymized historical fixture",
+        "created_at": "2026-11-06T06:21:55.959Z"
+      }
+    },
+    {
+      "model": "commerce.voucherredemption",
+      "pk": 1,
+      "fields": {
+        "voucher": 1,
+        "user": 1,
+        "order": 5,
+        "is_active": false,
+        "created_at": "2026-11-06T06:21:38.814Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 1,
+      "fields": {
+        "ingredient": 1,
+        "delta": "200000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL01",
+        "created_at": "2026-11-06T02:58:12.868Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 2,
+      "fields": {
+        "ingredient": 2,
+        "delta": "400000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL02",
+        "created_at": "2026-11-06T02:58:12.869Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 3,
+      "fields": {
+        "ingredient": 3,
+        "delta": "750000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL03",
+        "created_at": "2026-11-06T02:58:12.869Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 4,
+      "fields": {
+        "ingredient": 4,
+        "delta": "800000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL04",
+        "created_at": "2026-11-06T02:58:12.870Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 5,
+      "fields": {
+        "ingredient": 5,
+        "delta": "1000000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL05",
+        "created_at": "2026-11-06T02:58:12.870Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 6,
+      "fields": {
+        "ingredient": 6,
+        "delta": "150000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL06",
+        "created_at": "2026-11-06T02:58:12.871Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 7,
+      "fields": {
+        "ingredient": 7,
+        "delta": "60000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL07",
+        "created_at": "2026-11-06T02:58:12.871Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 8,
+      "fields": {
+        "ingredient": 8,
+        "delta": "120000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL08",
+        "created_at": "2026-11-06T02:58:12.871Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 9,
+      "fields": {
+        "ingredient": 9,
+        "delta": "40000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL09",
+        "created_at": "2026-11-06T02:58:12.872Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 10,
+      "fields": {
+        "ingredient": 10,
+        "delta": "120000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL10",
+        "created_at": "2026-11-06T02:58:12.872Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 11,
+      "fields": {
+        "ingredient": 11,
+        "delta": "10000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL11",
+        "created_at": "2026-11-06T02:58:12.873Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 12,
+      "fields": {
+        "ingredient": 12,
+        "delta": "35000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL12",
+        "created_at": "2026-11-06T02:58:12.873Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 13,
+      "fields": {
+        "ingredient": 13,
+        "delta": "2500000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL13",
+        "created_at": "2026-11-06T02:58:12.874Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 14,
+      "fields": {
+        "ingredient": 14,
+        "delta": "12000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL14",
+        "created_at": "2026-11-06T02:58:12.874Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 15,
+      "fields": {
+        "ingredient": 15,
+        "delta": "12000.000",
+        "reason": "ADJUST",
+        "note": "Anonymized historical fixture",
+        "order": null,
+        "actor": null,
+        "idempotency_key": "nau:v3:trial-stock-initial:NL15",
+        "created_at": "2026-11-06T02:58:12.875Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 16,
+      "fields": {
+        "ingredient": 4,
+        "delta": "-80.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:4",
+        "created_at": "2026-11-06T05:56:44.882Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 17,
+      "fields": {
+        "ingredient": 5,
+        "delta": "-280.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:5",
+        "created_at": "2026-11-06T05:56:44.885Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 18,
+      "fields": {
+        "ingredient": 6,
+        "delta": "-35.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:6",
+        "created_at": "2026-11-06T05:56:44.885Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 19,
+      "fields": {
+        "ingredient": 12,
+        "delta": "-22.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:12",
+        "created_at": "2026-11-06T05:56:44.886Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 20,
+      "fields": {
+        "ingredient": 13,
+        "delta": "-250.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:13",
+        "created_at": "2026-11-06T05:56:44.886Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 21,
+      "fields": {
+        "ingredient": 14,
+        "delta": "-1.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:14",
+        "created_at": "2026-11-06T05:56:44.887Z"
+      }
+    },
+    {
+      "model": "commerce.stockmovement",
+      "pk": 22,
+      "fields": {
+        "ingredient": 15,
+        "delta": "-1.000",
+        "reason": "CONSUME",
+        "note": "Anonymized historical fixture",
+        "order": 4,
+        "actor": 2,
+        "idempotency_key": "consume:4:15",
+        "created_at": "2026-11-06T05:56:44.887Z"
+      }
+    }
+  ],
+  "source_checks": {
+    "migration_history": true,
+    "model_schema": true,
+    "approved_menu": true,
+    "ingredients_15_exact": true,
+    "bom_50_exact": true,
+    "nonnegative_stock": true,
+    "one_order_stock_available": true,
+    "historical_integrity": true
+  }
+}

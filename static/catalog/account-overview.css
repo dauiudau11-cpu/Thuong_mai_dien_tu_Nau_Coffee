@@ -1,0 +1,20 @@
+.account-overview{padding-block:8px 24px;color:#3e2b20}
+.account-overview .account-welcome{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:28px}
+.account-overview .account-welcome h1{font-size:clamp(26px,3vw,36px);line-height:1.25;margin:8px 0 10px;overflow-wrap:anywhere}
+.account-welcome p:not(.eyebrow){color:#826d5d;font-size:14px;margin:0}
+.account-edit{font-size:13px;white-space:nowrap}
+.account-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:28px}
+.account-overview .account-metric{display:flex;align-items:center;gap:14px;padding:20px;border:1px solid #e6d8c8;border-radius:14px;background:#fffdf9;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+.account-metric:hover{border-color:#82926f;box-shadow:0 6px 20px #39211709}
+.account-metric-icon{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;background:#f3eadc;color:#76563b;font-size:22px}
+.account-metric div{flex:1}.account-metric div>span{font-size:13px;color:#796757}.account-metric strong{display:block;font-size:28px;line-height:1.3;margin-top:4px}
+.account-overview .account-metric-points{background:#edf0e5;border-color:#dce2d1}.account-metric-points .account-metric-icon{background:#dfe6d2;color:#52633e}
+.account-overview-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:24px;align-items:start}
+.account-overview .account-overview-panel{border:1px solid #e6d8c8;border-radius:16px;background:#fffdf9;padding:24px;min-width:0}
+.account-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.account-overview .account-panel-heading h2{font-size:23px;line-height:1.3;margin:0}.account-panel-heading a{font-size:12px;white-space:nowrap}
+.account-orders-empty{text-align:center;padding:28px 10px 36px}.account-orders-empty>span{display:inline-grid;place-items:center;border-radius:50%;width:60px;height:60px;background:#f5eee3;font-size:27px}.account-overview .account-orders-empty h3{font-size:19px;margin:18px 0 8px}.account-orders-empty p{font-size:13px;color:#826d5d;margin:0 0 22px}.account-orders-empty .button{font-size:13px}
+.account-recent-order{padding:18px 0;border-top:1px solid #eee4d8}.account-order-top,.account-order-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}.account-order-code{font-weight:600;text-decoration:none}.account-recent-order p{font-size:12px;color:#826d5d;margin:10px 0 14px}.account-order-bottom a{font-size:12px}.account-order-top .status-badge{font-size:11px}
+.account-personal dl{margin:0}.account-personal dl>div{margin-bottom:18px}.account-personal dt{font-size:12px;color:#826d5d;margin-bottom:6px}.account-personal dd{margin:0;font-size:14px;overflow-wrap:anywhere}.account-profile-link{display:inline-block;font-size:13px;margin:0 0 24px}.account-help{border-top:1px solid #eee4d8;padding-top:20px}.account-help strong{font-size:14px}.account-help p,.account-help a{font-size:12px}.account-help p{color:#826d5d;line-height:1.7}
+@media(max-width:760px){.account-overview-grid{grid-template-columns:1fr}.account-metrics{gap:10px}.account-overview .account-metric{padding:14px;gap:10px}.account-metric-icon{display:none}.account-metric strong{font-size:24px}.account-overview .account-welcome{align-items:flex-start;flex-direction:column;gap:16px}.account-overview .account-overview-panel{padding:20px}}
+@media(max-width:420px){.account-metrics{grid-template-columns:1fr;gap:10px}.account-metric-icon{display:grid;width:36px;height:36px;font-size:19px}.account-metric div{display:flex;align-items:center;justify-content:space-between;gap:12px}.account-metric strong{margin:0}.account-order-top{align-items:flex-start;flex-wrap:wrap}.account-overview .account-panel-heading h2{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.account-metric{transition:none}}

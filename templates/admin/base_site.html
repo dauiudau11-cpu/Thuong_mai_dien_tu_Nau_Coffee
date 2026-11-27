@@ -1,0 +1,36 @@
+{% extends "admin/base.html" %}{% load static nau_ui %} {% block title %}{{ title }} · Quản trị Nâu Coffee{% endblock %} {% block responsive %}{{ block.super }}<link
+  rel="stylesheet"
+  href="{% static 'catalog/admin.css' %}?v=20261116-dashboard"
+/>
+<script src="{% static 'catalog/admin-navigation.js' %}" defer></script>
+<link
+  rel="stylesheet"
+  href="{% static 'catalog/admin-dashboard.css' %}?v=20261116-unified"
+/>
+<script
+  src="{% static 'catalog/admin-dashboard.js' %}?v=20261116"
+  defer
+></script>
+<link
+  rel="stylesheet"
+  href="{% static 'catalog/admin-unified.css' %}?v=20261116-unified"
+/>
+<script
+  src="{% static 'catalog/admin-unified.js' %}?v=20261116-unified"
+  defer
+></script>
+{% endblock %} {% block branding %}<a
+  class="nau-admin-brand"
+  href="{% if nau_admin_groups and not nau_admin_native %}{% url 'dashboard' %}{% else %}{% url 'admin:index' %}{% endif %}"
+  ><span aria-hidden="true">n.</span
+  ><strong>NÂU COFFEE<small>QUẢN TRỊ & VẬN HÀNH</small></strong></a
+>{% endblock %} {% block nav-global %}{% if has_permission or nau_admin_groups %}<button
+  type="button"
+  class="nau-mobile-navigation"
+  aria-controls="nav-sidebar"
+  aria-expanded="false"
+>
+  Danh mục quản trị</button
+>{% endif %}{% endblock %} {% block footer %}
+<div class="nau-admin-footer">Nâu Coffee · Quản trị hệ thống.</div>
+{% endblock %}

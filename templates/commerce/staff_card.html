@@ -1,0 +1,10 @@
+{% load nau_ui %}<article class="kitchen-card" data-code="{{ order.public_code }}" data-version="{{ version }}" data-status="{{ order.status }}" data-detail="{% url 'staff_order_detail' order.public_code %}" data-action="{% url 'staff_command' order.public_code %}">
+<div class="order-card-heading"><button type="button" class="text-button" data-open aria-label="Chi tiết đơn {{ order.public_code|stringformat:'s'|slice:':8' }}"><strong>{{ order.public_code|stringformat:'s'|slice:':8' }}</strong></button><span class="status-badge">{{ order.channel }} · {{ order.get_fulfillment_display }}</span></div>
+<small>Đặt {{ order.created_at|date:'d/m H:i' }} · Nhận {{ order.scheduled_for|date:'d/m H:i'|default:'Chưa có lịch' }}</small>
+<ul>{% for item in order.items.all %}<li>{{ item.quantity }} × {{ item.product_name }} <small>{{ item.sku }}</small></li>{% endfor %}</ul>
+<strong>{{ order.total|vnd }}</strong><p>{{ order.status|vi_state }}</p>
+<p class="status-badge">{% if order.payment.status == 'PAID' %}Đã thanh toán mô phỏng{% else %}{{ order.payment.status|vi_state }}{% endif %} · {{ order.payment.method|vi_state }}</p>
+{% if blocked %}<p class="notice">Thiếu công thức tại thời điểm đặt và BOM cho SKU cũ. Cần Quản trị viên xác minh; không tự dùng công thức mới.</p>{% endif %}
+{% if action %}<button type="button" data-command="{{ action }}" class="full-width">{% if action == 'start' %}Bắt đầu pha chế{% elif action == 'finish' %}Pha xong{% elif action == 'handover' %}Đã giao khách{% else %}Chuyển sang chờ khách nhận{% endif %}</button>{% endif %}
+{% if can_cash %}<button type="button" data-command="cash" class="quiet full-width">Ghi nhận đã thu tiền mô phỏng</button>{% endif %}
+<p class="staff-card-error" role="alert"></p></article>

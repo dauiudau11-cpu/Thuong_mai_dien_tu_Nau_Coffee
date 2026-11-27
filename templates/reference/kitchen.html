@@ -1,0 +1,13 @@
+{% extends 'commerce/operations_base.html' %}{% load static %}
+{% block title %}Hàng chờ pha chế{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'catalog/staff.css' %}">{% endblock %}
+{% block workspace %}
+<div class="section-heading"><div><p class="eyebrow">NHÂN VIÊN · VẬN HÀNH MÔ PHỎNG</p><h1>Hàng chờ pha chế</h1><p>Tối đa 30 thẻ mỗi cột · Tự đồng bộ mỗi 12 giây khi tab hoạt động.</p></div><a class="button quiet" href="{% url 'queue' %}">Danh sách & ngoại lệ</a></div>
+<div id="staff-app" data-feed="{% url 'staff_board_data' %}">
+<form hidden id="staff-csrf">{% csrf_token %}</form>
+<p id="staff-notice" role="status" aria-live="polite"></p>
+<div id="staff-board">{% include 'commerce/staff_columns.html' %}</div>
+<dialog id="staff-drawer" aria-labelledby="staff-detail-title"><button type="button" id="staff-close" class="quiet">Đóng chi tiết</button><div id="staff-detail"></div><label>Ghi chú ca làm (tạm trên màn hình, chưa lưu)<textarea id="staff-draft" rows="3"></textarea></label></dialog>
+</div><script src="{% static 'catalog/staff.js' %}" defer></script>
+<noscript><p class="notice">Bật JavaScript để xử lý tại chỗ, hoặc dùng danh sách đơn hàng.</p></noscript>
+{% endblock %}

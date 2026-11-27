@@ -1,0 +1,118 @@
+{% extends 'commerce/operations_base.html' %}{% load nau_ui %}{% block title %}{{ title }}{% endblock %}{% block workspace %} {% if section == 'promotions' %}
+<section class="panel">
+  <h2>Voucher theo chính sách trước đây</h2>
+  <p>
+    Dữ liệu và chính sách voucher trước đây, được giữ lại để đối chiếu lịch sử.
+  </p>
+  <p>
+    Danh sách dữ liệu bên dưới có thể bao gồm voucher mới. {% if vouchers_v2_enabled %}<a class="button" href="{% url 'voucher_campaigns' %}"
+      >Mã giảm giá / Voucher</a
+    >
+    để tạo chương trình công khai/riêng và cấp lượt VIP.{% endif %}
+  </p>
+</section>
+{% endif %}
+<div class="section-heading">
+  <div>
+    <p class="eyebrow">NÂU · QUẢN TRỊ</p>
+    <h1>Quản lý {{ title|lower }}</h1>
+    <p>Tìm kiếm và quản lý thông tin cửa hàng.</p>
+  </div>
+  {% if user.is_staff %}<a class="button" href="{{ add_url }}"
+    >Thêm {{ title|lower }}</a
+  >{% endif %}
+</div>
+<form method="get" class="filters panel">
+  <label
+    >Tìm kiếm<input
+      type="search"
+      name="q"
+      maxlength="150"
+      value="{{ request.GET.q }}"
+      placeholder="Tên hoặc mã" /></label
+  ><label
+    >Trạng thái<select name="active">
+      <option value="">Tất cả</option>
+      <option value="yes" {% if request.GET.active == "yes" %}selected{% endif %}>
+        Đang hoạt động
+      </option>
+      <option value="no" {% if request.GET.active == "no" %}selected{% endif %}>
+        Tạm ngừng
+      </option>
+    </select></label
+  ><button>Lọc</button
+  ><a href="{% url 'reference_management' section %}">Xóa bộ lọc</a>
+</form>
+{% if section == 'products' %}
+<p class="notice">
+  {% if standard_menu_enabled %}Giá website bằng giá quầy. Chi phí nguyên liệu
+  chỉ dành cho quản trị; SKU lịch sử được giữ trong Trang quản trị.{% else %}Xem
+  giá theo từng kênh bán. Chọn Xem / sửa để quản lý thông tin sản phẩm; chưa có
+  dữ liệu chi phí nguyên liệu.{% endif %}
+</p>
+{% endif %}
+<div
+  class="reference-box reference-table-scroll{% if standard_menu_enabled %} standard-menu-table{% endif %}"
+>
+  <table>
+    <caption>
+      {{ title }} · {{ page_obj.paginator.count }} kết quả
+    </caption>
+    <thead>
+      <tr>
+        {% if section == 'products' %}
+        <th>Ảnh sản phẩm</th>
+        {% endif %}{% for header in headers %}
+        <th scope="col">{{ header }}</th>
+        {% endfor %}
+        <th scope="col">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        {% if section == 'products' %}
+        <td>
+          <img
+            src="{{ row.image }}"
+            alt="Ảnh sản phẩm"
+            width="70"
+            height="60"
+            loading="lazy"
+          />
+        </td>
+        {% endif %}{% for cell in row.cells %}
+        <td>{{ cell }}</td>
+        {% endfor %}
+        <td>
+          {% if user.is_staff %}<a class="button quiet" href="{{ row.edit }}"
+            >Xem / sửa</a
+          >{% else %}Cần quyền Trang quản trị để sửa{% endif %}
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="8">Chưa có kết quả phù hợp.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<nav class="pagination" aria-label="Phân trang">
+  {% if page_obj.has_previous %}<a
+    href="{% query_update page=page_obj.previous_page_number %}"
+    >Trước</a
+  >{% endif %}<span
+    >{{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</span
+  >{% if page_obj.has_next %}<a
+    href="{% query_update page=page_obj.next_page_number %}"
+    >Sau</a
+  >{% endif %}
+</nav>
+{% if user.is_staff %}
+<p><a href="{{ admin_url }}">Quản lý chi tiết trong Trang quản trị</a></p>
+{% endif %}
+<p class="helptext">
+  Các thay đổi cần quyền quản trị tương ứng. Kiểm tra thông tin trước khi lưu.
+</p>
+{% endblock %}

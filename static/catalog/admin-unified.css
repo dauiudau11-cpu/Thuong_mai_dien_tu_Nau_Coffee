@@ -1,0 +1,57 @@
+/* One Admin shell across native CRUD and custom operational views; no Staff selector. */
+#header{box-sizing:border-box;min-height:100px;padding:20px 28px;align-items:center}
+#header #user-tools{margin-left:auto}.nau-mobile-navigation{margin-left:0}
+#nav-sidebar{width:260px;flex-basis:260px;padding:18px 12px;scrollbar-gutter:stable}
+#nav-sidebar .nau-nav-group{margin:12px 0 20px;border:0}
+#nav-sidebar .nau-nav-group table{width:100%;table-layout:fixed;background:transparent}
+#nav-sidebar .nau-nav-group caption{background:transparent;color:#bfa98c;padding:10px 8px;font:600 10px/1.6 var(--nau-sans);letter-spacing:.08em;text-align:left}
+#nav-sidebar .nau-nav-group th{padding:0;border:0;width:auto}
+#nav-sidebar .nau-nav-group a{display:block;padding:10px 12px;color:#f3e8d7;font-size:12px;line-height:1.65;overflow-wrap:anywhere;border-radius:7px;font-weight:450}
+#nav-sidebar .nau-nav-group a:hover{background:#4b3627;text-decoration:none}
+#nav-sidebar .nau-nav-group .current-model,#nav-sidebar .nau-nav-group .current-model th{background:transparent}
+#nav-sidebar .nau-nav-group a[aria-current]{background:#62724f;color:#fffdf9;font-weight:650}
+#nav-filter{width:100%;margin-bottom:10px;box-sizing:border-box}
+#content{width:auto;max-width:none;box-sizing:border-box;min-width:0}
+.main.shifted>#nav-sidebar+.content{max-width:calc(100% - 284px)}
+.admin-custom-page #content{max-width:none;margin:0;width:100%;padding:26px 28px}
+.admin-custom-page #header{position:static;display:flex;background:#3a271c;color:#fffdf9;width:100%;height:auto}
+.admin-custom-page #main{max-width:none;margin:0;padding:0;gap:0;min-height:calc(100vh - 190px)}
+.admin-custom-page #content-start{padding:0;min-width:0}
+.admin-custom-page .nau-admin-workspace{max-width:none;min-width:0;margin:0}
+.admin-custom-page .panel,.admin-custom-page .reference-box,.admin-custom-page .premium-dash-panel{background:#fffdf9;border:1px solid #e0d6c8;border-radius:12px;padding:20px;margin:0 0 20px;min-width:0;box-sizing:border-box}
+.admin-custom-page h1{font:400 30px/1.3 var(--nau-serif);color:#3a271c;letter-spacing:-.4px}
+.admin-custom-page h2,.admin-custom-page h3{color:#3a271c;line-height:1.5}
+.admin-custom-page p,.admin-custom-page label{line-height:1.7}
+.admin-custom-page form p{margin:0 0 16px}
+.admin-custom-page form p label{display:block;margin-bottom:6px}
+.admin-custom-page input,.admin-custom-page select,.admin-custom-page textarea{min-height:42px;max-width:100%;box-sizing:border-box;font-family:var(--nau-sans)}
+.admin-custom-page input[type=checkbox],.admin-custom-page input[type=radio]{min-height:0}
+.admin-custom-page #content button,.admin-custom-page #content a.button{background:#526144;color:#fffdf9;padding:11px 16px;border:0;border-radius:7px;min-height:42px;line-height:1.5;font:500 12px/1.5 var(--nau-sans);cursor:pointer;display:inline-flex;align-items:center;text-decoration:none}
+.admin-custom-page .quiet{background:#eee8dd!important;color:#3a271c!important}
+.admin-custom-page table{width:100%;border-collapse:collapse;font-size:13px}
+.admin-custom-page th,.admin-custom-page td{text-align:left;padding:12px;line-height:1.6}
+.admin-custom-page th{color:#6f604e}.admin-custom-page td{overflow-wrap:anywhere}
+.admin-custom-page .reference-table-scroll,.admin-custom-page .premium-table-scroll{overflow-x:auto;max-width:100%}
+.admin-custom-page .filters,.admin-custom-page .reference-tabs,.admin-custom-page .pagination{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+.admin-custom-page .notice{padding:14px 16px;background:#eeeedd;border-left:3px solid #65734e;border-radius:6px;margin:0 0 16px}
+.admin-custom-page #nav-sidebar a{color:#f3e8d7}
+@media(max-width:1024px){#header{padding:18px 20px}.main.shifted>#nav-sidebar+.content{max-width:100%}#nav-sidebar{width:100%;flex-basis:auto;max-height:none}.admin-custom-page #main{display:flex;flex-direction:column}.admin-custom-page #content{padding:22px 20px}.admin-custom-page #content-start{width:100%;max-width:100%}}
+@media(max-width:600px){#header{padding:16px;gap:14px}#header #user-tools{margin:0;width:100%;text-align:left}.admin-custom-page #content{padding:20px 16px}.admin-custom-page .panel,.admin-custom-page .premium-dash-panel{padding:16px}.admin-custom-page h1{font-size:26px}.admin-custom-page .filters>*{max-width:100%}}
+/* Header children must wrap independently of Django's small-screen defaults. */
+@media(max-width:1024px){
+ #header,.admin-custom-page #header{display:flex;flex-flow:row wrap;align-items:center;width:100%;box-sizing:border-box}
+ #header #branding{min-width:0;max-width:100%}
+ #header #user-tools{flex:0 1 100%;width:100%;min-width:0;max-width:100%;margin:0;white-space:normal;overflow-wrap:anywhere;text-align:left}
+ #header .nau-mobile-navigation{flex:0 0 auto;max-width:100%}
+}
+
+/* App indexes remain real Django model directories, separate from traffic home. */
+.dashboard[class*=" app-"] #content.colMS{display:block}
+.dashboard[class*=" app-"] #content.colMS>#content-main{display:block;width:100%;max-width:none}
+/* Preserve header hit targets when the flexible main area is taller than a viewport. */
+#header{flex-shrink:0;height:auto}
+#container>nav,#container>#footer{flex-shrink:0}
+.admin-custom-page #main{min-height:0;flex-shrink:0}
+
+.admin-custom-page #content h2{font-size:22px;line-height:1.45;margin:0 0 14px;font-weight:450}
+.admin-custom-page #content h3{font-size:18px;line-height:1.5}

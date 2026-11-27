@@ -1,0 +1,19 @@
+{% load nau_ui %}
+<article class="product-card premium-card beverage-{{ product.code }}">
+  <a class="product-image" href="{% url 'product' product.slug %}" aria-label="Xem sản phẩm {{ product.name }}">
+    <img src="{{ product.image_url }}" alt="{{ product.name }}" width="740" height="320" loading="lazy">
+
+  </a>
+  <div class="product-card-body">
+    <p class="eyebrow">{{ product.category }}</p>
+    <h3><a href="{% url 'product' product.slug %}">{{ product.name }}</a></h3>
+    {% if product.card_original_price > product.menu_price_effective %}
+    <p class="sale-caption"><del>{{ product.card_original_price|vnd }}</del> · Ưu đãi đến {{ product.card_sale_ends|date:'d/m/Y H:i' }}</p>
+    {% endif %}
+    <div class="product-card-bottom">
+      {% if product.menu_price_effective != None %}<strong>{{ product.menu_price_effective|vnd }}</strong>
+      {% else %}<span class="muted">Chọn món để xem giá</span>{% endif %}
+    </div>
+    <a class="premium-card-action" href="{% url 'product' product.slug %}">Xem chi tiết <span aria-hidden="true">→</span></a>
+  </div>
+</article>

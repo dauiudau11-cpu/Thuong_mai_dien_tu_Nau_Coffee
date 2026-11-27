@@ -1,0 +1,9 @@
+{% load nau_ui %}
+<article class="product-card home-product-card beverage-{{ product.code }}">
+  <a class="home-product-link" href="{% url 'product' product.slug %}">
+    <span class="product-image"><img src="{{ product.image_url }}" alt="{{ product.name }}" width="370" height="240" loading="lazy"></span>
+    <span class="home-product-name">{{ product.name }}</span>
+    {% if product.card_original_price > product.menu_price_effective %}<span class="sale-caption"><del>{{ product.card_original_price|vnd }}</del> · Ưu đãi đến {{ product.card_sale_ends|date:'d/m/Y' }}</span>{% endif %}
+    <strong class="home-product-price">{% if product.menu_price_effective != None %}{{ product.menu_price_effective|vnd }}{% else %}Xem giá{% endif %}</strong>
+  </a>
+</article>

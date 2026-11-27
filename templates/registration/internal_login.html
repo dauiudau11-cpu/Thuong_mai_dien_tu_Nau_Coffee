@@ -1,0 +1,16 @@
+{% load static %}<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nâu Coffee | Đăng nhập nội bộ</title>
+<link rel="stylesheet" href="{% static 'catalog/typography.css' %}">
+<link rel="stylesheet" href="{% static 'catalog/internal-login.css' %}">
+<link rel="icon" href="{% static 'catalog/favicon.svg' %}" type="image/svg+xml"></head>
+<body><main class="internal-login-shell"><section class="internal-login-card" aria-labelledby="internal-login-title">
+<a class="internal-brand" href="{% url 'home' %}" aria-label="Xem website Nâu Coffee"><span>n.</span><strong>NÂU COFFEE<small>HỆ THỐNG NỘI BỘ</small></strong></a>
+<div><p class="eyebrow">QUẢN TRỊ &amp; VẬN HÀNH</p><h1 id="internal-login-title">Đăng nhập nội bộ</h1><p>Hệ thống quản lý và điều hành Nâu Coffee</p></div>
+{% if form.non_field_errors %}<div class="internal-error" role="alert">{{ form.non_field_errors }}</div>{% endif %}
+<form method="post" class="internal-login-form">{% csrf_token %}
+<label for="{{ form.username.id_for_label }}">Tên đăng nhập{{ form.username }}</label>
+<label for="{{ form.password.id_for_label }}">Mật khẩu{{ form.password }}</label>
+<input type="hidden" name="next" value="{{ next }}"><button type="submit">Đăng nhập</button></form>
+<p class="internal-note">Chỉ dành cho nhân sự được phân quyền. Mọi truy cập đều được bảo vệ.</p>
+</section></main></body></html>

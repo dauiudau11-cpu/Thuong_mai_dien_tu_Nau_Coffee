@@ -1,0 +1,14 @@
+{% extends 'registration/customer_base.html' %}{% load static %}
+{% block page_styles %}{{ block.super }}<link rel="stylesheet" href="{% static 'catalog/account-layout.css' %}?v=20261121-compact">{% endblock %}
+{% block content %}<div class="customer-account-layout">
+<aside class="account-sidebar"><div class="account-sidebar-identity"><span class="account-avatar" aria-hidden="true">{{ user.username|first|upper }}</span><div><strong>{{ user.username }}</strong><a href="{% url 'profile' %}">Chỉnh sửa hồ sơ</a></div></div>
+<nav aria-label="Quản lý tài khoản">
+<p>Tài khoản của tôi</p>
+<a href="{% url 'profile' %}"{% if request.resolver_match.url_name == 'profile' %} aria-current="page"{% endif %}><span aria-hidden="true">◎</span>Hồ sơ cá nhân</a>
+<a href="{% url 'addresses' %}"{% if request.resolver_match.url_name == 'addresses' or request.resolver_match.url_name == 'address_edit' %} aria-current="page"{% endif %}><span aria-hidden="true">⌖</span>Sổ địa chỉ</a>
+<a href="{% url 'password_change' %}"{% if request.resolver_match.url_name == 'password_change' %} aria-current="page"{% endif %}><span aria-hidden="true">⚿</span>Đổi mật khẩu</a>
+<a href="{% url 'orders' %}"{% if request.resolver_match.url_name == 'orders' or request.resolver_match.url_name == 'order_detail' %} aria-current="page"{% endif %}><span aria-hidden="true">▤</span>Đơn hàng của tôi</a>
+<a href="{% url 'loyalty' %}"{% if request.resolver_match.url_name == 'loyalty' %} aria-current="page"{% endif %}><span aria-hidden="true">☆</span>Điểm thành viên</a>
+<a href="{% url 'promotions' %}"><span aria-hidden="true">◇</span>Voucher của tôi</a>
+{% if policy_consent_enabled %}<a href="{% url 'policy_preferences' %}"{% if request.resolver_match.url_name == 'policy_preferences' %} aria-current="page"{% endif %}><span aria-hidden="true">◈</span>Quyền riêng tư</a>{% endif %}
+</nav></aside><div class="account-workspace">{% block account_content %}{% endblock %}</div></div>{% endblock %}

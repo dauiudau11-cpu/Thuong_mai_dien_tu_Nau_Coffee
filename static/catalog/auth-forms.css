@@ -1,0 +1,30 @@
+.auth-layout .auth .helptext,.auth-layout .auth .helptext ul,.auth-layout .auth .helptext li,.auth-layout .auth ul:not(.errorlist) { font-size:12px; line-height:1.6; color:#756b60; font-weight:400; }
+.auth-layout .auth .helptext { display:block; margin:6px 0 0; }
+.auth-layout .auth .helptext ul,.auth-layout .auth ul:not(.errorlist) { margin:6px 0 0; padding-left:18px; }
+.auth-layout .auth .errorlist { color:#9b332b; font-size:13px; line-height:1.6; padding-left:18px; margin:8px 0; }
+.auth-layout .password-control { display:flex; align-items:stretch; gap:8px; }
+.auth-layout .password-control input { flex:1; min-width:0; width:100%; }
+.auth-layout .password-toggle { flex:0 0 auto; width:auto; padding:8px 12px; min-height:44px; background:#f2ecdf; color:#526445; border:1px solid #d9cebd; font-size:12px; }
+body[data-page=register] .auth-story { background:linear-gradient(180deg,#301c11df,#301c1170),url('premium/hero.webp') 70% center/cover; }
+body[data-page=register] .auth-story img { height:230px; width:100%; object-fit:cover; border-radius:12px; }
+
+.auth-layout.customer-accounts .auth-intro { font-size:14px; line-height:1.65; color:#756b60; margin-bottom:24px; }
+.auth-layout.customer-accounts .policy-consent h2 { font-size:18px; line-height:1.4; margin-bottom:12px; }
+.auth-layout.customer-accounts .policy-consent > p:not(:has(input)) { font-size:12px; line-height:1.65; color:#756b60; margin:8px 0 16px; }
+.auth-layout.customer-accounts .policy-consent label { font-size:14px; line-height:1.6; }
+.auth-layout.customer-accounts .auth .helptext, .auth-layout.customer-accounts .auth .helptext * { font-size:12px; line-height:1.6; }
+
+/* Eye toggle sits inside the field; its hit area remains keyboard/touch friendly. */
+.auth-layout .auth .password-control { display:block; position:relative; }
+.auth-layout .auth .password-control input { width:100%; padding-right:52px; }
+.auth-layout .auth .password-control .password-toggle { position:absolute; top:50%; right:2px; transform:translateY(-50%); display:grid; place-items:center; width:44px; height:40px; min-height:40px; padding:0; border:0; background:transparent; color:#75604b; border-radius:8px; }
+.auth-layout .auth .password-control .password-toggle:hover { background:#eee6d8; }
+body[data-page=register] .auth-story h2,body[data-page=login] .auth-story h2 { color:#fff8ed; }
+body[data-page=register] .auth-story > p,body[data-page=login] .auth-story > p { color:#efe1ce; }
+body[data-page=register] .auth-story h2 em,body[data-page=login] .auth-story h2 em { color:#d5dfc1; }
+
+.auth-layout .auth .login-assistance { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px 16px; margin: -8px 0 20px; font-size:13px; }
+body.storefront-spacing .auth-layout .auth .login-assistance .remember-login { display:inline-flex; align-items:center; gap:8px; margin:0; font-size:13px; font-weight:400; cursor:pointer; min-height:40px; }
+.login-assistance input[type=checkbox] { width:16px; height:16px; margin:0; accent-color:#60734b; }
+.auth-layout .auth .login-assistance > a { display:inline-flex; align-items:center; min-height:40px; }
+@media(max-width:359px) { .auth-layout .auth .login-assistance { gap:4px 12px; } }

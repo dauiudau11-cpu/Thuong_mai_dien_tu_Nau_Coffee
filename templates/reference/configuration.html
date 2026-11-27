@@ -1,0 +1,62 @@
+{% extends 'commerce/operations_base.html' %}{% load static %}{% block title %}Cấu hình hệ thống{% endblock %}{% block workspace %}
+<h1>Cấu hình hệ thống</h1>
+<p>Thông tin, giao diện và quy tắc vận hành của Nâu Coffee.</p>
+<nav class="reference-tabs" aria-label="Các trang cấu hình">
+  {% for slug,label in tabs %}<a
+    href="{% url 'reference_configuration' slug %}"
+    {% if slug == section %}aria-current="page"{% endif %}
+    >{{ label }}</a
+  >{% endfor %}
+</nav>
+<div class="reference-columns">
+  {% for panel in panels %}
+  <section class="reference-box">
+    <h2>{{ panel.title }}</h2>
+    <dl>
+      {% for label,value in panel.rows %}
+      <div>
+        <dt>{{ label }}</dt>
+        <dd>{{ value }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endfor %}
+</div>
+{% if section == 'appearance' or section == 'store' %}
+<section class="reference-box reference-brand-preview">
+  <img
+    src="{% static 'catalog/premium/hero.webp' %}"
+    alt="Ảnh bìa Nâu Coffee Nâu Coffee"
+    width="700"
+    height="220"
+  />
+  <h2>Một chút Nâu cho ngày dịu lại.</h2>
+  <a class="button" href="{% url 'home' %}">Xem giao diện website</a>
+</section>
+{% endif %}
+<p class="notice">
+  Chỉ xem cấu hình hiện tại. {% if not stored %}Đang hiển thị các giá trị mặc
+  định.{% endif %}
+</p>
+{% if section == 'delivery' or section == 'store' %}{% if user.is_staff %}<a
+  class="button quiet"
+  href="{% url 'admin:commerce_storesettings_changelist' %}"
+  >Mở cấu hình vận hành trong Trang quản trị</a
+>{% endif %}{% endif %} {% if section == 'payment' %}{% if user.is_staff %}<a
+  class="button quiet"
+  href="{% url 'admin:catalog_channelprice_changelist' %}"
+  >Xem giá theo kênh hiện có</a
+>{% endif %}{% endif %} {% if section == 'notifications' %}<a
+  class="button quiet"
+  href="{% url 'queue' %}"
+  >Xem hàng đợi đơn</a
+>{% if user.is_staff %}
+<a class="button quiet" href="{% url 'admin:support_message_changelist' %}"
+  >Xử lý phản hồi</a
+>{% endif %}{% endif %} {% if section == 'security' %}
+<p>
+  Không thực hiện sao lưu/khôi phục hoặc thay quyền tự động ở trang này. Mọi
+  thao tác có nguy cơ mất dữ liệu cần phê duyệt riêng.
+</p>
+{% endif %} {% endblock %}

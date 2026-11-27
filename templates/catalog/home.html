@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Một chút Nâu cho ngày dịu lại{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'catalog/home-alignment.css' %}"><link rel="stylesheet" href="{% static 'catalog/home-spacing.css' %}?v=20261121-reviews">{% endblock %}
+{% block body_class %}premium-home premium-approved-home home-reference{% endblock %}
+{% block content %}
+<section class="premium-hero premium-approved-hero" aria-labelledby="approved-hero-heading">
+  <div class="premium-hero-copy">
+    <p class="eyebrow">CÀ PHÊ · CON NGƯỜI · NHỮNG KHOẢNH KHẮC DỊU LẠI</p>
+    <h1 id="approved-hero-heading">Một chút Nâu<br>cho ngày dịu lại.</h1>
+    <p>Những ly cà phê được chuẩn bị đầy tâm huyết, cho bạn khoảng lặng nhẹ nhàng giữa ngày bận rộn.</p>
+    <div class="pickup-hero-actions"><a class="button premium-hero-cta" href="{% url 'menu' %}">Đặt trước, nhận tại quán <span aria-hidden="true">→</span></a><a class="button olive pickup-partner-cta" href="{% url 'delivery_partners' %}">Muốn giao tận nơi?</a></div>
+  </div>
+  <span class="premium-hero-script" aria-hidden="true">Cà phê ngon<br>Ngày thêm dịu</span>
+</section>
+
+<div class="premium-home-wrap premium-approved-content">
+  <section class="premium-featured" aria-labelledby="featured-heading">
+    <div class="section-heading premium-approved-heading">
+      <div><h2 id="featured-heading">Đồ uống nổi bật</h2></div>
+      <a href="{% url 'menu' %}" class="premium-see-all">Xem tất cả <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="grid product-grid premium-photo-product-grid">
+      {% for product in products|slice:":6" %}
+        {% include 'includes/home_product_card.html' %}
+      {% empty %}
+        <div class="empty-state"><h3>Thực đơn đang được chuẩn bị</h3><p>Hẹn bạn một chút Nâu thật sớm.</p><a href="{% url 'menu' %}">Xem thực đơn</a></div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  <div class="home-experience">
+  {% if vouchers %}
+  <section class="premium-voucher-hero" aria-labelledby="premium-offer-title">
+    <p class="eyebrow">ƯU ĐÃI HIỆN HÀNH</p><h2 id="premium-offer-title">Một chút ưu đãi, <br>thêm niềm vui.</h2>
+    <div class="premium-approved-vouchers">
+    {% for voucher in vouchers %}<span>Mã <strong>{{ voucher.code }}</strong></span>{% endfor %}
+    </div>
+    <a class="button" href="{% url 'promotions' %}">Xem điều kiện áp dụng <span aria-hidden="true">→</span></a>
+  </section>
+  {% else %}
+  <section class="premium-voucher-hero premium-brand-banner" aria-labelledby="premium-banner-title">
+    <p class="eyebrow">MỘT KHOẢNG NGHỈ CHO RIÊNG BẠN</p><h2 id="premium-banner-title">Chọn một vị quen. <br>Thưởng một ngày dịu.</h2>
+    <a class="button" href="{% url 'menu' %}">Tìm thức uống yêu thích <span aria-hidden="true">→</span></a>
+  </section>
+  {% endif %}
+
+  <section class="premium-benefit-grid" aria-label="Điểm nổi bật của trải nghiệm Nâu">
+    <div><span class="premium-benefit-icon" aria-hidden="true">◈</span><p><strong>Gu cà phê Việt</strong><small>Những hương vị thân quen</small></p></div>
+    <div><span class="premium-benefit-icon" aria-hidden="true">☕</span><p><strong>Đặt món dễ dàng</strong><small>Tùy chọn và giá hiển thị rõ</small></p></div>
+    <div><span class="premium-benefit-icon" aria-hidden="true">▣</span><p><strong>Theo dõi đơn hàng</strong><small>Nhìn thấy tiến trình chuẩn bị</small></p></div>
+    <div><span class="premium-benefit-icon" aria-hidden="true">♡</span><p><strong>Một chút yên</strong><small>Thêm khoảng nghỉ giữa ngày</small></p></div>
+  </section>
+
+  </div>
+
+  <section class="premium-customer-voices home-review-carousel" aria-labelledby="premium-review-heading">
+    <div class="section-heading"><h2 id="premium-review-heading">Khách hàng nói về Nâu</h2></div>
+    {% if reviews_are_samples %}<p class="home-review-disclosure">Cảm nhận mẫu để giới thiệu giao diện.</p>{% endif %}
+    <div class="home-review-viewport" tabindex="0" role="region" aria-label="Đánh giá tự trượt. Giữ vào thẻ hoặc giữ phím Space để dừng đọc.">
+      <div class="premium-voice-grid">
+        {% for review in reviews %}
+        <article>
+          <strong class="home-review-name">{{ review.user.first_name|default:'Khách hàng Nâu' }}</strong>
+          <div class="home-review-stars" role="img" aria-label="{{ review.rating }} trên 5 sao">{% for star in '12345' %}<span aria-hidden="true"{% if forloop.counter > review.rating %} class="home-review-star-empty"{% endif %}>{% if forloop.counter <= review.rating %}★{% else %}☆{% endif %}</span>{% endfor %}</div>
+          <blockquote>{{ review.body|truncatechars:180 }}</blockquote>
+          <small>{{ review.product.name }}</small>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <script src="{% static 'catalog/home-reviews.js' %}?v=20261121-auto" defer></script>
+
+</div>
+{% endblock %}

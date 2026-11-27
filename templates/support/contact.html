@@ -1,0 +1,46 @@
+{% extends 'base.html' %}{% block title %}{% if is_feedback %}Phản hồi{% else
+%}Liên hệ{% endif %}{% endblock %} {% block content %}
+<section class="reference-page-hero">
+  <p class="eyebrow">NÂU LẮNG NGHE</p>
+  <h1>Liên hệ và hỗ trợ</h1>
+</section>
+<div class="detail contact-layout">
+  <section>
+    <h2>Liên hệ và hỗ trợ</h2>
+    <p>Nâu luôn trân trọng những lời nhắn, góp ý và chia sẻ từ bạn.</p>
+    <p>
+      Nếu có thắc mắc về đơn hàng, sản phẩm hoặc cần được hỗ trợ, bạn có thể
+      liên hệ trực tiếp với Nâu hoặc gửi lời nhắn qua biểu mẫu bên cạnh.
+    </p>
+    <p>
+      <a href="{% url 'policy_center' %}"
+        >Xem Chính sách &amp; Điều khoản của Nâu Coffee</a
+      >
+    </p>
+    <h3>Thông tin liên hệ</h3>
+    <p><strong>Địa chỉ:</strong> {{ store_info.address }}</p>
+    <p>
+      <strong>Liên hệ:</strong>
+      <a href="tel:{{ store_info.phone }}">{{ store_info.phone }}</a>
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:{{ store_info.email }}">{{ store_info.email }}</a>
+    </p>
+    <div class="notice">
+      Để bảo vệ thông tin cá nhân, vui lòng không gửi mật khẩu, OTP hoặc mã xác
+      thực. Một số yêu cầu liên quan đến dữ liệu cá nhân có thể cần xác minh
+      danh tính.
+    </div>
+    <p>
+      <strong
+        >Website sử dụng thanh toán mô phỏng và không thu tiền thật.</strong
+      >
+    </p>
+  </section>
+  <form method="post" class="panel contact-form">
+    <h2>Gửi Nâu một lời nhắn</h2>
+    {% csrf_token %}{{ form.as_p }}<button>Gửi lời nhắn</button>
+  </form>
+</div>
+{% endblock %}

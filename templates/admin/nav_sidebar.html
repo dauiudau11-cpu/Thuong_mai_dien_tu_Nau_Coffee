@@ -1,0 +1,6 @@
+{% load i18n %}
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Thu gọn danh mục"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Danh mục quản trị">
+<input type="search" id="nav-filter" placeholder="Tìm chức năng quản trị…" aria-label="Lọc danh mục quản trị">
+{% if nau_admin_groups %}{% for group in nau_admin_groups %}<section class="module nau-nav-group"><table><caption>{{ group.label }}</caption><tbody>{% for entry in group.items %}<tr{% if entry.active %} class="current-model"{% endif %}><th scope="row"><a href="{{ entry.url }}"{% if entry.active %} aria-current="page"{% endif %}>{{ entry.label }}</a></th></tr>{% endfor %}</tbody></table></section>{% endfor %}{% else %}{% include 'admin/app_list.html' with app_list=available_apps show_changelinks=False %}{% endif %}
+</nav>

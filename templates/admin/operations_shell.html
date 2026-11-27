@@ -1,0 +1,8 @@
+{% extends 'admin/base_site.html' %}{% load static %}
+{% block bodyclass %}admin-custom-page{% endblock %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" href="{% static 'catalog/site.css' %}"><link rel="stylesheet" href="{% static 'catalog/premium-reference.css' %}"><link rel="stylesheet" href="{% static 'catalog/premium-approved.css' %}"><link rel="stylesheet" href="{% static 'catalog/drive-reference.css' %}">{% block page_styles %}{% endblock %}{% endblock %}
+{% block extrahead %}{{ block.super }}<script src="{% static 'catalog/site.js' %}" defer></script>{% if vouchers_v2_enabled %}<script src="{% static 'catalog/voucher-live.js' %}" defer></script>{% endif %}{% endblock %}
+{% block usertools %}<div id="user-tools">{{ request.user.get_username }} · <a href="{% url 'home' %}">Xem website</a> · <a href="{% url 'password_change' %}">Đổi mật khẩu</a><form id="logout-form" action="{% url 'logout' %}" method="post">{% csrf_token %}<button type="submit">Thoát</button></form></div>{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% if nau_admin_native %}{% url 'admin:index' %}{% else %}{% url 'dashboard' %}{% endif %}">Quản trị hệ thống</a> › <span aria-current="page">{{ nau_admin_page }}</span></div>{% endblock %}
+{% block content_title %}{% endblock %}
+{% block content %}<section class="nau-admin-workspace">{% block workspace %}{% endblock %}</section>{% endblock %}

@@ -1,0 +1,9 @@
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/notoserif-400.woff2') format('woff2');}
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/notoserif-500.woff2') format('woff2');}
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/notoserif-600.woff2') format('woff2');}
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/notoserif-700.woff2') format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/bevietnampro-400.woff2') format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/bevietnampro-500.woff2') format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/bevietnampro-600.woff2') format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/bevietnampro-700.woff2') format('woff2');}
+:root{--nau-serif:'Noto Serif','DejaVu Serif','Times New Roman',serif;--nau-sans:'Be Vietnam Pro','Segoe UI',sans-serif;--font-family-primary:var(--nau-sans);--font-family-secondary:var(--nau-sans)}

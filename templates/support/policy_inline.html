@@ -1,0 +1,1 @@
+{% for segment in segments %}{% if segment.kind == 'strong' %}<strong>{{ segment.text }}</strong>{% elif segment.kind == 'em' %}<em>{{ segment.text }}</em>{% elif segment.kind == 'link' %}<a href="{{ segment.url }}" rel="noopener noreferrer">{{ segment.text }}</a>{% else %}{{ segment.text }}{% endif %}{% endfor %}

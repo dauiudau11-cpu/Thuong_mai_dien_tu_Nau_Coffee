@@ -1,0 +1,5 @@
+{% load nau_ui %}
+<section class="panel refund-status" aria-labelledby="refund-heading"><h2 id="refund-heading">Hoàn tiền mô phỏng</h2>
+<dl><div><dt>Số tiền hoàn</dt><dd>{{ order.payment.amount|vnd }}</dd></div><div><dt>Phương thức</dt><dd>Hoàn tiền mô phỏng</dd></div><div><dt>Trạng thái</dt><dd>{% if order.payment.status == 'REFUND_PENDING' %}Đang chờ Quản trị viên xác nhận hoàn tiền{% else %}Đã hoàn tiền mô phỏng{% endif %}</dd></div><div><dt>Yêu cầu hoàn</dt><dd>{{ refund_requested_at|date:'d/m/Y H:i:s'|default:'Chưa có thời điểm trong dữ liệu lịch sử' }}</dd></div><div><dt>Xác nhận hoàn</dt><dd>{{ order.payment.refunded_at|date:'d/m/Y H:i:s'|default:'Chưa có thời điểm xác nhận' }}</dd></div></dl>
+{% if order.payment.status == 'REFUNDED' %}<p>{% if refund_confirmed_event %}Có giao dịch xác nhận hoàn trong lịch sử thanh toán.{% else %}Dữ liệu lịch sử chưa có ghi nhận xác nhận; không suy đoán ai đã xử lý.{% endif %}</p>{% endif %}
+<p class="caption">Không phát sinh tiền thật, không thực hiện chuyển khoản ngân hàng.</p></section>

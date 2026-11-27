@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="540" y1="20" x2="200" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#d9ddc8"/><stop offset="1" stop-color="#f0e6d6"/></linearGradient>
+    <linearGradient id="glass" x1="250" y1="240" x2="465" y2="510" gradientUnits="userSpaceOnUse"><stop stop-color="#fff7e7" stop-opacity=".7"/><stop offset=".35" stop-color="#fff8e6" stop-opacity=".1"/><stop offset="1" stop-color="#f0d7b9" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="milk" x1="300" y1="310" x2="420" y2="570" gradientUnits="userSpaceOnUse"><stop stop-color="#815238"/><stop offset=".4" stop-color="#a9794c"/><stop offset=".7" stop-color="#d1aa7f"/><stop offset="1" stop-color="#e9d2ad"/></linearGradient>
+    <linearGradient id="coffee" x1="280" y1="300" x2="430" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#382318"/><stop offset="1" stop-color="#73472c"/></linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="13"/></filter>
+    <clipPath id="cup"><path d="M238 283Q350 311 473 281L450 538Q445 570 353 572Q267 569 264 540Z"/></clipPath>
+  </defs>
+  <circle cx="380" cy="330" r="254" fill="url(#bg)"/>
+  <circle cx="380" cy="330" r="285" stroke="#aa9676" stroke-opacity=".22"/>
+  <circle cx="380" cy="330" r="300" stroke="#aa9676" stroke-opacity=".12"/>
+  <path d="M550 501C593 452 609 396 590 346M588 406C545 400 525 380 533 362C557 358 580 376 588 406M596 383C618 359 642 355 652 363C650 385 622 398 596 383M579 441C547 446 518 433 514 418C542 402 569 419 579 441M591 432C624 408 650 412 655 429C636 448 613 452 591 432" stroke="#65714f" stroke-width="3" fill="#7e8960"/>
+  <ellipse cx="361" cy="582" rx="155" ry="21" fill="#5b4029" opacity=".18" filter="url(#shadow)"/>
+  <ellipse cx="354" cy="570" rx="152" ry="25" fill="#bfa680" opacity=".36"/>
+  <ellipse cx="354" cy="564" rx="142" ry="20" fill="#e8d7ba" stroke="#c3ad8b"/>
+  <path d="M238 283Q350 311 473 281L450 538Q445 570 353 572Q267 569 264 540Z" fill="url(#glass)" stroke="#fdf5e6" stroke-width="3"/>
+  <g clip-path="url(#cup)"><path d="M235 313H478V590H235Z" fill="url(#milk)"/>
+  <path d="M236 310C289 294 320 332 350 319C385 305 419 337 480 308V369C434 355 407 385 367 364C325 341 284 379 241 351Z" fill="url(#coffee)"/>
+  <path d="M309 355C322 401 359 389 361 437C368 476 405 459 417 501" stroke="#edd9ba" stroke-width="13" opacity=".45"/>
+  <path d="M264 327L279 539" stroke="#fff9e9" stroke-width="9" opacity=".4"/>
+  <path d="M451 322L433 542" stroke="#fff9e9" stroke-width="5" opacity=".3"/>
+  </g>
+  <ellipse cx="355" cy="284" rx="118" ry="28" fill="#744d34" stroke="#f6ead3" stroke-width="3"/>
+  <ellipse cx="355" cy="281" rx="108" ry="22" fill="#513321"/>
+  <g fill="#d8cbb5" fill-opacity=".55" stroke="#f9f1e4" stroke-opacity=".6" stroke-width="2"><rect x="283" y="259" width="49" height="30" rx="8" transform="rotate(-14 283 259)"/><rect x="341" y="268" width="50" height="28" rx="7" transform="rotate(-8 341 268)"/><rect x="391" y="255" width="42" height="28" rx="6" transform="rotate(15 391 255)"/></g>
+  <path d="M395 278L445 130" stroke="#8d704c" stroke-width="13" stroke-linecap="round"/><path d="M393 278L443 130" stroke="#dcc8a6" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="352" cy="435" rx="50" ry="46" fill="#f4e6ce" opacity=".85"/><path d="M335 459V422Q336 410 345 409Q359 406 363 421V455M334 421V455M371 452L372 453" stroke="#624a32" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#6b452c"><ellipse cx="205" cy="557" rx="11" ry="8" transform="rotate(25 205 557)"/><ellipse cx="178" cy="573" rx="11" ry="8" transform="rotate(-25 178 573)"/><ellipse cx="216" cy="586" rx="10" ry="7" transform="rotate(-15 216 586)"/></g>
+  <g stroke="#b88c61" stroke-width="1.5"><path d="M197 553L212 560M170 576L185 570M209 588L222 584"/></g>
+</svg>

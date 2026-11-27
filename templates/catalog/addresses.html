@@ -1,0 +1,7 @@
+{% extends 'catalog/account_base.html' %}{% block title %}Sổ địa chỉ{% endblock %}{% block account_content %}
+<section class="account-addresses" aria-label="Sổ địa chỉ">
+{% if addresses %}<div class="account-address-list">{% for address in addresses %}<article class="account-address-card"><header><strong>{{ address.label }}</strong><a href="{% url 'address_edit' address.pk %}">Chỉnh sửa</a></header><p><strong>{{ address.recipient }}</strong> · {{ address.phone }}</p><p>{{ address.text }}</p><form method="post" action="{% url 'address_remove' address.pk %}">{% csrf_token %}<button class="text-button" type="submit">Xóa địa chỉ</button></form></article>{% endfor %}</div>{% endif %}
+<details class="account-address-editor"{% if form.is_bound or form.instance.pk %} open{% endif %}>
+<summary>{% if not addresses %}<span class="address-empty-intro"><span class="address-empty-icon" aria-hidden="true">⌖</span><strong>Bạn chưa có địa chỉ nào</strong><span>Lưu thông tin để thuận tiện cho những lần đặt món sau.</span></span>{% endif %}<span class="button olive">{% if form.instance.pk %}Chỉnh sửa địa chỉ{% else %}<span aria-hidden="true">＋</span> Thêm địa chỉ{% endif %}</span></summary>
+<form method="post" class="auth account-address-form">{% csrf_token %}{{ form.as_p }}<div class="account-address-actions"><button type="submit">{% if form.instance.pk %}Lưu thay đổi{% else %}Lưu địa chỉ{% endif %}</button><a href="{% url 'addresses' %}">Hủy</a></div></form>
+</details></section>{% endblock %}

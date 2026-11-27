@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Hộp thư sandbox localhost{% endblock %}
+{% block content %}<section class="container"><h1>Hộp thư sandbox localhost</h1><p>Thư chỉ được lưu nội bộ trên máy này. Không gửi qua Gmail. Chỉ quản trị có quyền xem liên kết kích hoạt và đặt lại mật khẩu.</p>
+{% if selected %}<article class="panel">{% for link in selected.links %}<p><a class="button" href="{{ link }}">Mở liên kết sandbox</a></p>{% endfor %}<pre style="white-space:pre-wrap;overflow-wrap:anywhere">{{ selected.body }}</pre></article>{% endif %}
+{% for message in mail %}<article class="panel"><a href="{% url 'local_mail' message.id %}">{{ message.subject }}</a><p>{{ message.to }}</p></article>{% empty %}<p>Chưa có thư thử nghiệm.</p>{% endfor %}</section>{% endblock %}
